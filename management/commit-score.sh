@@ -7,7 +7,7 @@ if [ "$1" == "" ]; then
 	exit 1
 fi
 
-FILES="ly *.sublime-project *.sh"
+FILES="ly midi *.sublime-project buildParts.sh .gitignore .gitmodules"
 echo "-=-"
 echo "adding files $FILES"
 git add $FILES
@@ -22,7 +22,7 @@ if [ "$PDF" == "pdf" ]; then
 	echo "-=-"
 	echo "Committing pdf files"
 	cd pdf
-	PDF_FILES=`ls . | grep -v README`
+	PDF_FILES=`find . -type f | grep -v '.git' | grep -v README`
 	git add $PDF_FILES
 	git commit -m"$MESSAGE" $PDF_FILES
 	git push origin master

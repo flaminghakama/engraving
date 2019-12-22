@@ -1,5 +1,5 @@
 PART_FORMAT_DIR=~/git/engraving/part-format
-PDFCAT=~/git/PyPDF2/Scripdts/pdfcat
+PDFCAT=~/git/PyPDF2/Scripts/pdfcat
 
 function stitchTitlePage {
 	SONG=$1
