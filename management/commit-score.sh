@@ -7,10 +7,13 @@ if [ "$1" == "" ]; then
 	exit 1
 fi
 
-FILES="ly midi *.sublime-project buildParts.sh .gitignore .gitmodules"
+FILES="ly midi *.sublime-project buildParts.sh .gitignore .gitmodules README.md"
+if [ "$PDF" == "pdf" ]; then
+	FILES="$FILES pdf"
+fi
 echo "-=-"
 echo "adding files $FILES"
-git add $FILES
+echo git add $FILES
 
 echo "-=-"
 echo "committing with message '$MESSAGE'"

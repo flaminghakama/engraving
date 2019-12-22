@@ -34,4 +34,8 @@ Choose a Lilypond .gitignore for the song repo, but do not create a .gitignore f
 
 ## Migration from scores
 
+Run the script management/setting-up-repos.sh, supplying arguments of the repo name and the location of the original source.
+
 ## New projects from template
+
+TODO: migrate the lilypond-project-template to here, after revising proect file, templates and scripts to reflect new organization.
