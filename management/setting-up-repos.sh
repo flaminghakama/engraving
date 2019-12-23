@@ -4,9 +4,9 @@
 # Migrate old source code
 
 function showHelp {
-	echo "$1  Usage:"
-	echo "    ./setting-up-repos.sh SONG ORIGINAL_SONG_DIR"
-	echo "    ./setting-up-repos.sh my-song-name /Users/elaine/git/scores/alt.musica"
+	echo "setting-up-repos.sh Usage:"
+	echo "    ./management/setting-up-repos.sh SONG ORIGINAL_SONG_DIR"
+	echo "    ./management/setting-up-repos.sh my-song-name /Users/elaine/git/scores/alt.musica"
 	exit 1	
 }
 
@@ -21,186 +21,46 @@ echo "Creating repo for song $1 from location $2"
 
 SONG=$1
 ORIGINAL_SONG_DIR=$2
-SONG_REGEXP=`echo $SONG | sed 's/\-/\\\-/g'`
-SONG_PDF="$SONG-pdf"
-REPO_BASE_URL="https://github.com/flaminghakama/"
-LILYPOND_REPO_URL="$REPO_BASE_URL$SONG"
-PDF_REPO_URL="$REPO_BASE_URL$SONG_PDF"
+ENGRAVING_DIR=`pwd`
 
-SCORES_DIR="/Users/elaine/git/engraving/scores"
-SONG_DIR="$SCORES_DIR/$SONG"
-ORIGINAL_PROJECT_FILE="$SONG_DIR/ly/$SONG.sublime-project"
-PROJECT_FILE="$SONG_DIR/$SONG.sublime-project"
-BUILD_FILE="$SONG_DIR/buildParts.sh"
-README_FILE="README.md"
-SONG_TITLE_CASE=`echo $SONG | sed 's/-/ /g' | perl -p -n -e 's/(\S+)/\u\L$1/g'`
+source $ENGRAVING_DIR/management/set-variables.sh
 
 #  ######################  #
 #  CLONE AND UPDATE REPOS  #
 #  ######################  #
 
 echo "-=-"
-echo "Clone the lilypond repo $LILYPOND_REPO_URL into $SCORES_DIR"
-cd $SCORES_DIR
-git clone $LILYPOND_REPO_URL
-
-echo "-=-"
-echo "Add new repo $SONG to engraving .gitignore"
-cat .gitignore >> .gitignore.tmp
-echo "$SONG" >> .gitignore.tmp
-mv .gitignore.tmp .gitignore
-
-echo "-=-"
-echo "Create a README.md"
-echo "Sheet music for alt.jazz arrangement of $SONG_TITLE_CASE." >> $README_FILE
-echo "Lilypond source files and build scripts." >> $README_FILE
-git add $README_FILE
-
-echo "-=-"
-echo "Committing and pushing update to README.md and .gitignore"
-git commit -m"Updating README and and .gitignore" $README_FILE .gitignore
-git push origin master
-
-echo "-=-"
-echo "cd $SONG_DIR" 
-cd $SONG_DIR
-
-echo "-=-"
-echo "Nest the PDF repo inside the lilypond repo"
-git submodule add $PDF_REPO_URL
-git mv $SONG_PDF pdf
-perl -p -i -e "'s/path.*/path = pdf/g'" .gitmodules 
-git add pdf .gitmodules
-git commit -m "'added $SONG_PDF module'" .gitmodules pdf
-cd pdf
-git submodule init
-
+echo "Calling script to clone git repos"
+echo $CLONE_REPOS_SCRIPT $SONG
 
 #  ####################  #
 #  COPY PREVIOUS SOURCE  #
 #  ####################  #
 
 echo "-=-"
-echo "cd to song directory $SONG_DIR"
-cd $SONG_DIR
-
-echo "-=-"
-echo "mkdir ly"
-mkdir ly
-
-echo "-=-"
-echo "copying files from $ORIGINAL_SONG_DIR/ly/$SONG to ly directory"
-for file in $ORIGINAL_SONG_DIR/ly/$SONG/* ; do 
-    cp -R  "$file" ly
-done
-
-echo "-=-"
-echo "mkdir midi"
-mkdir midi
-
-echo "-=-"
-echo "copying files from $ORIGINAL_SONG_DIR/ly/$SONG to ly directory"
-for file in $ORIGINAL_SONG_DIR/midi/*.midi ; do 
-    cp -R  "$file" midi
-done
-
-echo "-=-"
-echo "Addding entry in .gitignore to ignore sublime-workspace files"
-cat .gitignore >> .gitignore.tmp
-echo "*.sublime-workspace" >> .gitignore.tmp
-mv .gitignore.tmp .gitignore
-
-echo "-=-"
-echo "mv ly/buildParts.sh ."
-mv ly/buildParts.sh .
-
-echo "-=-"
-echo "rm ly/$SONG.sublime-workspace"
-rm "ly/$SONG.sublime-workspace"
-
-git add buildParts.sh .gitignore midi ly
+echo "Calling script to update project file" 
+echo $COPY_SOURCE_SCRIPT $SONG
 
 #  ###################  #
 #  UPDATE PROJECT FILE  #
 #  ###################  #
 
 echo "-=-"
-echo "move the original project file down a directory"
-mv $ORIGINAL_PROJECT_FILE $SONG_DIR
-
-# echo "-=-"
-# echo "update location of flaming-libs in project file $PROJECT_FILE"
-# perl -p -i -e "'s|\.\./flaming\-libs|/flaming-libs|g'" $PROJECT_FILE
-
-echo "-=-"
-echo "update location of subdirectories in project file $PROJECT_FILE"
-perl -p -i -e 's|path": "|path": "ly/|g' $PROJECT_FILE
-perl -p -i -e 's|path": "ly/\.|path\": ".|g' $PROJECT_FILE
-
-echo "-=-"
-echo "Update the song section of $PROJECT_FILE"
-echo "subl -n $PROJECT_FILE"
-echo '            "file_exclude_patterns": [".git*", "*ideas*", "*.pdf"],'
-echo '            "folder_exclude_patterns": ["ly", "pdf", "midi"]'
-echo "Update the library section of $PROJECT_FILE"
-echo '            "file_exclude_patterns": [".git*", "LICENSE", "README.md"],'
-echo "Update the PDF section of $PROJECT_FILE"
-echo '            "file_exclude_patterns": [".git*", "LICENSE", "README.md"],'
+echo "Calling script to update project file" 
+echo $UPDATE_PROJECT_FILE_SCRIPT $SONG
 
 #  #######################  #
 #  RECREATE THE BUILD FILE  #
 #  #######################  #
 
-BUILD_TMP="$BUILD_FILE.tmp"
 echo "-=-"
-echo "Update use of song name in build file $BUILD_FILE"
-perl -p -i -e "'s|$SONG_REGEXP|\\$SONG|g'" $BUILD_FILE
-
-echo "-=-"
-echo "Initializing temp build file $BUILD_TMP"
-echo "subl -n $BUILD_TMP"
-echo "#!/usr/local/bin/bash" >> $BUILD_TMP
-echo "source ~/git/part-format/part-format-functions.sh" >> $BUILD_TMP
-echo "SONG=\"$SONG\"" >> $BUILD_TMP 
-
-echo "-=-"
-echo "Adding old build file $BUILD_FILE to build temp."
-cat $BUILD_FILE >> $BUILD_TMP
-
-echo "-=-"
-echo "Renaming build file as $BUILD_FILE"
-echo "subl -n $BUILD_FILE"
-mv $BUILD_TMP $BUILD_FILE
-
-echo "-=-"
-echo "Removing song name from directory structure in $BUILD_FILE"
-perl -p -i -e "'s|ly/$SONG_REGEXP|ly|g'" $BUILD_FILE
-
-echo "-=-"
-echo "Making build file executable"
-chmod ugo+x $BUILD_FILE
+echo "Calling script to recreate the build file" 
+echo $RECREATE_BUILD_FILE_SCRIPT $SONG
 
 #  ############################  #
 #  UPDATE PATHS IN SOURCE FILES  # 
 #  ############################  #
- 
-echo "-=-"
-echo "Update part files for includes"        
-perl -p -i -e "'s|$SONG_REGEXP/||g'" ly/parts/*.ly
 
 echo "-=-"
-echo "Update instrument files for includes"        
-perl -p -i -e "'s|$SONG_REGEXP/||g'" ly/instruments/*.ily
-
-echo "-=-"
-echo "Update music files for includes"        
-perl -p -i -e "'s|$SONG_REGEXP/||g'" ly/music/*.ily
-
-echo "-=-"
-echo "Updating includes for staves"
-perl -p -i -e 's|include.*staff-defaults.ily|include \"staff-defaults.ily|g' ly/staves/*/*.ily
-
-echo "-=-"
-echo "Use relative paths for includes"
-perl -p -i -e "s/.*header.ily.*/\#(ly:set-option 'relative-includes \#t)\n\\\\include \"ly\/structures\/header.ily\"/g" ly/parts/*.ly
-
+echo "Calling script to update source files" 
+echo $UPDATE_SOURCE_FILES_SCRIPT $SONG

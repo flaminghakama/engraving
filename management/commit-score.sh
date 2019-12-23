@@ -7,6 +7,10 @@ if [ "$1" == "" ]; then
 	exit 1
 fi
 
+echo "-=-"
+echo "removing workspace"
+rm *.sublime-workspace
+
 FILES="ly midi *.sublime-project buildParts.sh .gitignore .gitmodules README.md"
 if [ "$PDF" == "pdf" ]; then
 	FILES="$FILES pdf"
