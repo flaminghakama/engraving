@@ -58,6 +58,10 @@ echo "mkdir midi"
 mkdir midi
 
 echo "-=-"
+echo "mkdir logic"
+mkdir logic
+
+echo "-=-"
 echo "copying files from $ORIGINAL_SONG_DIR/midi to midi directory"
 for file in $ORIGINAL_SONG_DIR/midi/*.midi ; do 
     cp -R  "$file" midi
@@ -67,6 +71,7 @@ echo "-=-"
 echo "Addding entry in .gitignore to ignore sublime-workspace files"
 cat .gitignore >> .gitignore.tmp
 echo "*.sublime-workspace" >> .gitignore.tmp
+echo "logic" >> .gitignore.tmp
 mv .gitignore.tmp .gitignore
 
 echo "-=-"
