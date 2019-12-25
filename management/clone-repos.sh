@@ -40,8 +40,9 @@ git clone $LILYPOND_REPO_URL
 
 echo "-=-"
 echo "Add new repo $SONG to engraving .gitignore"
-cat .gitignore >> .gitignore.tmp
+echo ".DS_STORE" > .gitignore.tmp
 echo "$SONG" >> .gitignore.tmp
+cat .gitignore >> .gitignore.tmp
 mv .gitignore.tmp .gitignore
 
 echo "-=-"
