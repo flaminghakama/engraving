@@ -50,10 +50,16 @@ perl -p -i -e 's|path": "ly/\.|path\": ".|g' $PROJECT_FILE
 echo "-=-"
 echo "Update the song section of $PROJECT_FILE"
 echo "subl -n $PROJECT_FILE"
-echo '            "file_exclude_patterns": [".git*", "*ideas*", "*.pdf"],'
-echo '            "folder_exclude_patterns": ["ly", "pdf", "midi"]'
+echo '            "file_exclude_patterns": [".git*", "*ideas*", "*.pdf", "READ*"],'
+echo '            "folder_exclude_patterns": ["ly", "pdf", "midi", "logic"]'
+
+echo "-=-"
 echo "Update the library section of $PROJECT_FILE"
 echo '            "file_exclude_patterns": [".git*", "LICENSE", "README.md"],'
+
+echo "-=-"
 echo "Update the PDF section of $PROJECT_FILE"
+perl -p -i -e 's|path":.*pdf.*|path": "pdf",|g' $PROJECT_FILE
+echo '            "path": "pdf",'
 echo '            "file_exclude_patterns": [".git*", "LICENSE", "README.md"],'
 

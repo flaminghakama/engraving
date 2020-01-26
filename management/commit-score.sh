@@ -17,7 +17,7 @@ if [ "$PDF" == "pdf" ]; then
 fi
 echo "-=-"
 echo "adding files $FILES"
-echo git add $FILES
+git add $FILES
 
 echo "-=-"
 echo "committing with message '$MESSAGE'"
