@@ -7,13 +7,15 @@ titleRight = "Right"
 titleFull = "Left Right"
 instrumentName = ""
 composerName = "Elaine Paul"
+copyright = \markup { \tiny "copyright © 2020 Elaine Paul" }
+arranger = ""
 
 \include "../../flaming-libs/flaming-standard.ily"
 
 \header {
     source = ""
     style = ""
-    copyright = \markup { \tiny "copyright © 2020 Elaine Paul" } 
+    copyright = \copyright
     lastupdated = ""
     title = \markup { \italic \fontsize #4 \bold { \titleFull }  }
     poet = ""

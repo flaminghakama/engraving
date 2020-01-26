@@ -41,6 +41,6 @@ chordsLead = \chordmode {  \set chordChanges = ##t  \set chordNameExceptions = #
 	\chordsSong		  
 }
 chordsPart = \chordmode {  \set chordChanges = ##t  \set chordNameExceptions = #flamingChordExceptions 
-  \noChordsSong
+    \chordsSong
 }
 
