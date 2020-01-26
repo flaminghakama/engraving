@@ -39,11 +39,8 @@ cd $SCORES_DIR
 git clone $LILYPOND_REPO_URL
 
 echo "-=-"
-echo "Add new repo $SONG to engraving .gitignore"
-echo ".DS_STORE" > .gitignore.tmp
-echo "$SONG" >> .gitignore.tmp
-cat .gitignore >> .gitignore.tmp
-mv .gitignore.tmp .gitignore
+echo "cd $SONG_DIR" 
+cd $SONG_DIR
 
 echo "-=-"
 echo "Create a README.md"
@@ -52,13 +49,9 @@ echo "Lilypond source files and build scripts." >> $README_FILE
 git add $README_FILE
 
 echo "-=-"
-echo "Committing and pushing update to README.md and .gitignore"
-git commit -m"Updating README and and .gitignore" $README_FILE .gitignore
+echo "Committing and pushing update to README.md"
+git commit -m"Updating README" $README_FILE
 git push origin master
-
-echo "-=-"
-echo "cd $SONG_DIR" 
-cd $SONG_DIR
 
 echo "-=-"
 echo "Nest the PDF repo inside the lilypond repo"

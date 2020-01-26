@@ -5,8 +5,12 @@
 
 function showHelp {
 	echo "setting-up-repos.sh Usage:"
-	echo "    ./management/setting-up-repos.sh SONG ORIGINAL_SONG_DIR"
+	echo "    ./management/setting-up-repos.sh SONG [ ORIGINAL_SONG_DIR ]?"
+	echo "    ./management/setting-up-repos.sh my-song-name"
 	echo "    ./management/setting-up-repos.sh my-song-name /Users/elaine/git/scores/alt.musica"
+	echo ""
+	echo "Clone the git repos for SONG (lilypond and pdf)"
+	echo "If ORIGINAL_SONG_DIR is specified, copies and updates lilypond code"
 	exit 1	
 }
 
@@ -14,13 +18,18 @@ if [ "$1" == "" ]; then
 	showHelp  "Please specify a song."
 fi
 
-if [ "$2" == "" ]; then
-	showHelp  "Please specify a song and location."
-fi
-echo "Creating repo for song $1 from location $2"
-
 SONG=$1
-ORIGINAL_SONG_DIR=$2
+MESSAGE="Creating repo for song $SONG"
+COPY=no
+ORIGINAL_SONG_DIR=""
+
+if [ "$2" != "" ]; then
+	ORIGINAL_SONG_DIR=$2
+	MESSAGE="$MESSAGE from location $2"
+	COPY=yes
+fi
+echo "$MESSAGE"
+
 ENGRAVING_DIR=`pwd`
 
 source $ENGRAVING_DIR/management/set-variables.sh
@@ -33,34 +42,37 @@ echo "-=-"
 echo "Calling script to clone git repos"
 echo $CLONE_REPOS_SCRIPT $SONG
 
-#  ####################  #
-#  COPY PREVIOUS SOURCE  #
-#  ####################  #
+if [ "$COPY" == "yes" ]; then
 
-echo "-=-"
-echo "Calling script to update project file" 
-echo $COPY_SOURCE_SCRIPT $SONG
+	#  ####################  #
+	#  COPY PREVIOUS SOURCE  #
+	#  ####################  #
 
-#  ###################  #
-#  UPDATE PROJECT FILE  #
-#  ###################  #
+	echo "-=-"
+	echo "Calling script to update project file" 
+	echo $COPY_SOURCE_SCRIPT $SONG
 
-echo "-=-"
-echo "Calling script to update project file" 
-echo $UPDATE_PROJECT_FILE_SCRIPT $SONG
+	#  ###################  #
+	#  UPDATE PROJECT FILE  #
+	#  ###################  #
 
-#  #######################  #
-#  RECREATE THE BUILD FILE  #
-#  #######################  #
+	echo "-=-"
+	echo "Calling script to update project file" 
+	echo $UPDATE_PROJECT_FILE_SCRIPT $SONG
 
-echo "-=-"
-echo "Calling script to recreate the build file" 
-echo $RECREATE_BUILD_FILE_SCRIPT $SONG
+	#  #######################  #
+	#  RECREATE THE BUILD FILE  #
+	#  #######################  #
 
-#  ############################  #
-#  UPDATE PATHS IN SOURCE FILES  # 
-#  ############################  #
+	echo "-=-"
+	echo "Calling script to recreate the build file" 
+	echo $RECREATE_BUILD_FILE_SCRIPT $SONG
 
-echo "-=-"
-echo "Calling script to update source files" 
-echo $UPDATE_SOURCE_FILES_SCRIPT $SONG
+	#  ############################  #
+	#  UPDATE PATHS IN SOURCE FILES  # 
+	#  ############################  #
+
+	echo "-=-"
+	echo "Calling script to update source files" 
+	echo $UPDATE_SOURCE_FILES_SCRIPT $SONG
+fi
