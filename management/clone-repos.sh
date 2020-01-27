@@ -49,8 +49,19 @@ echo "Lilypond source files and build scripts." >> $README_FILE
 git add $README_FILE
 
 echo "-=-"
-echo "Committing and pushing update to README.md"
-git commit -m"Updating README" $README_FILE
+echo "Create a .gitignore"
+echo "Sheet music for alt.jazz arrangement of $SONG_TITLE_CASE." >> $README_FILE
+echo "Lilypond source files and build scripts." >> $README_FILE
+
+echo "*.ps" > .gitignore
+echo "*.log" >> .gitignore
+echo "*~" >> .gitignore
+echo "*.sublime-workspace" >> .gitignore
+git add .gitignore
+
+echo "-=-"
+echo "Committing and pushing update to README.md and .gitignore"
+git commit -m"Updating README" $README_FILE .gitignore
 git push origin master
 
 echo "-=-"
