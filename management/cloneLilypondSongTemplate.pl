@@ -14,7 +14,7 @@
 #
 #  cloneLilypondSongTemplate.pl SONG TEMPLATE [ <INSTRUMENT-TRANSPOSITION> ]*
 #
-#  Invoke from the engraving directory, in which exists the templates/TEMPLATE directory structure.
+#  Invoke from the engraving directory
 #
 #  Example invocation:
 #  ./management/cloneLilypondSongTemplate.pl a-night-in-tunisia Flute English-Horn-in-F Bass-Clarinet-in-Bb Clave Bass Rhythm Lead-Sheet 
@@ -298,6 +298,7 @@ my $instrumentTemplate = slurpFile($instrumentTemplateFile, "instrument template
 #  Process each part/score
 my $partName ;
 my @lilypondPartInvocation ; 
+my @lilypondPartArchive ; 
 my $partFile ;
 my @partNames ; 
 my $partContents ;  
@@ -325,6 +326,7 @@ foreach $partName (@ARGV){
 
     #  Prepare the invocation of the part file.
     push(@lilypondPartInvocation, "rm \$SONG-$partName.pdf ; lilypond ly/parts/\$SONG-$partName.ly ; open -a Preview \$SONG-$partName.pdf") ; 
+    push(@lilypondPartArchive, "mv \$SONG-$partName.pdf pdf") ; 
 
     $poet = convertPartNameToPoet($partName) ; 
 
@@ -475,7 +477,9 @@ writeFile($invocationFile,
         "source ../../part-format/part-format-functions.sh",
         "SONG=\"$song\"",
         "lilypond ly/parts/\$SONG-Score-Sound.ly ; mv \$SONG-Score-Sound.midi midi",
-        @lilypondPartInvocation
+        @lilypondPartInvocation, 
+        " ",
+        @lilypondPartArchive
     )
 ) ; 
 chmod 0755, $invocationFile;
