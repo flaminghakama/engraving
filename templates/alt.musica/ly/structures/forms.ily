@@ -21,6 +21,10 @@ structureSong = \relative c {
     \tag SegmentBIII {
         \startSection "B3"
         s1*16
+    }
+    \tag SegmentAIV {
+        \startSection "A4"
+        s1*28
         \bar "|." 
     }
 }
