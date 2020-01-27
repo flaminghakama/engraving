@@ -1,7 +1,11 @@
+        \new ChordNames \transpose c c { \chordsSong }
         \new PianoStaff = "piano" \with {
             instrumentName = "Piano"
+            shortInstrumentName = "P."
+            magnifyStaff = #4/7
         }
         <<
+            \include "ly/staves/scores/staff-defaults.ily"
             \new Staff = "upper" <<
                 \clef treble
                 \new Voice = "first" \pianoVoiceOne
