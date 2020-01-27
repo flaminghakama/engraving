@@ -5,5 +5,5 @@
 \include "flaming-header.ily"
 \include "flaming-barlines.ily"
 \include "flaming-dynamics.ily"
-\include "align-tempo.ily"
+%\include "align-tempo.ily"
 \include "instrument-names.ily"

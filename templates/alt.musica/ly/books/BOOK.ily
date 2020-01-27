@@ -16,7 +16,6 @@
         instrumentName = \poet
     }
 
-    %%%%% wee %%%%%
     \score {
         \keepWithTag #'(Part PDF
             InstrumentTAGNAME

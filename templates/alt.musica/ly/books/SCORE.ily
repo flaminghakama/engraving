@@ -18,14 +18,16 @@
         instrumentName = \poet
     }
 
-    %%%%% SONG %%%%%
     \score {
         \keepWithTag #'(Score PDF
             Flute
-            Clarinet
-            Bassoon
+            EnglishHorn
+            BassClarinet
+            Trumpet
+            Horn
+            Trombone
             Voice
-            Drums
+            Clave
             ViolinI
             ViolinII
             Viola
@@ -43,7 +45,8 @@
             SegmentBIIIReprise
             SegmentCoda
         ) <<
-            \include "ly/staffgroups/concert/Woodwinds.ily"
+            \include "ly/staffgroups/transposed/Woodwinds.ily"
+            \include "ly/staffgroups/transposed/Brass.ily"
             \include "ly/staffgroups/concert/Choir.ily"
             \include "ly/staffgroups/concert/Percussion.ily"
             \include "ly/staffgroups/concert/Strings.ily"

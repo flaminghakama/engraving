@@ -12,7 +12,7 @@
             \clef bass
             \transpose c c <<
                 \autoPageBreaksOff
-                \bassBreaks
+                %\bassBreaks
                 \bassGlobal 
             >>
         }

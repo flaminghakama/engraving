@@ -14,7 +14,7 @@
             \clef treble
             \transpose c c <<
                 \autoPageBreaksOff
-                \beatPatternPart
+                %\beatPatternPart
                 \violinIGlobal 
             >>
         }

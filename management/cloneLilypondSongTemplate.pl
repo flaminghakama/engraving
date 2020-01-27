@@ -324,7 +324,7 @@ my @scoreContents ;
 foreach $partName (@ARGV){
 
     #  Prepare the invocation of the part file.
-    push(@lilypondPartInvocation, "rm $song-$partName.pdf ; lilypond ly/parts/$song-$partName.ly ; open -a Preview $song-$partName.pdf") ; 
+    push(@lilypondPartInvocation, "rm \$SONG-$partName.pdf ; lilypond ly/parts/\$SONG-$partName.ly ; open -a Preview \$SONG-$partName.pdf") ; 
 
     $poet = convertPartNameToPoet($partName) ; 
 
@@ -457,6 +457,7 @@ foreach $partName (@scoreNames){
         "part file", 
         join("\n", 
             getVersionLineFromPart($partContents),  
+            "#(ly:set-option 'relative-includes #t)",
             getStructuresFromPart($partContents), 
             @instrumentIncludes,
             @globalMusicDefinitions,
@@ -467,7 +468,16 @@ foreach $partName (@scoreNames){
 
 #  Create the invocation script
 my $invocationFile = "$songDir/buildParts.sh" ;
-writeFile($invocationFile, "shell script to create parts", join("\n", @lilypondPartInvocation)) ; 
+writeFile($invocationFile, 
+    "shell script to create parts", 
+    join("\n", 
+        "#!/usr/local/bin/bash",
+        "source ../../part-format/part-format-functions.sh",
+        "SONG=\"$song\"",
+        "lilypond ly/parts/\$SONG-Score-Sound.ly ; mv \$SONG-Score-Sound.midi midi",
+        @lilypondPartInvocation
+    )
+) ; 
 chmod 0755, $invocationFile;
 
 #  Remove the copied template files

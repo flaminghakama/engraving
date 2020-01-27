@@ -27,3 +27,11 @@ COPY_SOURCE_SCRIPT="$SCRIPTS_DIR/copy-source.sh"
 UPDATE_PROJECT_FILE_SCRIPT="$SCRIPTS_DIR/update-project-file.sh"
 RECREATE_BUILD_FILE_SCRIPT="$SCRIPTS_DIR/recreate-build-file.sh"
 UPDATE_SOURCE_FILES_SCRIPT="$SCRIPTS_DIR/update-source-files.sh"
+
+ALT_JAZZ_WOODWIND_PARTS="Flute English-Horn-in-F Clarinet-in-A Bass-Clarinet-in-Bb Bassoon"
+ALT_JAZZ_BRASS_PARTS="Trumpet-in-Bb Horn-in-F Trombone"
+ALT_JAZZ_STRING_PARTS="Violin-I Violin-II Viola Cello Bass"
+ALT_JAZZ_RHYTHM_PARTS="Voice Clave Drums Piano"
+ALT_JAZZ_SCORES="Score-Transposed Score-Concert Lead-Sheet Score-Sound"
+ALT_JAZZ_PARTS="$ALT_JAZZ_WOODWIND_PARTS $ALT_JAZZ_BRASS_PARTS $ALT_JAZZ_STRING_PARTS $ALT_JAZZ_RHYTHM_PARTS $ALT_JAZZ_SCORES"
+
