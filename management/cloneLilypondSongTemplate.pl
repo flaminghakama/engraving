@@ -67,14 +67,22 @@
 
 #          staves/*/*.ily
 #          staffgroups/*/*.ily
-
-
 #  
+
+#  Additionally, create a Manifest of the song.
+#  Looks for manifest template manifest/SONG.js
+#  Updates strings in the template related to the song title
+#  And adds entries for each instrumental part and score 
+
+
 #  Part file <SONG>-<INSTRUMENT-TRANSPOSITION>.ly like octagon-arbiter-English-Horn-in-F.ly
 #  Book file <INSTRUMENT-TRANSPOSITION>.ily like English-Horn-in-F.ily
 #  Instrument variable name is instrumentName like englishHorn
 #  Instrument file is instrumentName.ily like englishHorn.ily
 #  Poet (how the part name is printed on the part) based on <INSTRUMENT-TRANSPOSITION> like English Horn in F
+
+
+
 
 use strict ;
 use warnings ;
@@ -119,8 +127,8 @@ sub getPartType {
 }
 
 sub isPart { 
-        my ($fileName) = @_ ; 
-        return getPartType($fileName) eq "Part" ; 
+    my ($fileName) = @_ ; 
+    return getPartType($fileName) eq "Part" ; 
 }
 
 sub isSound { 
@@ -175,6 +183,18 @@ sub convertPartNameToPoet {
     my ($partName) = @_ ; 
     $partName =~ s/\-/ /g ;
     return $partName ; 
+}
+
+sub convertSongNameToTitle {
+    my ($songName) = @_ ; 
+    my @words = split('-', $songName) ;
+    my $word ;
+    my $title = '' ;   
+    foreach $word (@words) {
+        $title = $title . ucfirst($word) . " ";
+    }
+    $title =~ s/\s+$//;
+    return $title ; 
 }
 
 sub convertPartNameToStaffFileName {
@@ -258,6 +278,7 @@ my $lyDir = "$songDir/ly" ;
 #  Get the template and copy it to the song directory
 my $templateName = shift(@ARGV) ; 
 my $templateDir = "templates/$templateName" ; 
+`mkdir $songDir` ;  
 `cp -R $templateDir/* $songDir` ;  
 
 #  Make a copy of the sublime text project for the song and remove the template 
@@ -322,6 +343,8 @@ my $staffSoundContents ;
 my @globalMusicDefinitions ; 
 my @instrumentIncludes ; 
 my @scoreContents ; 
+my @manifestParts ;
+my @manifestScores ;
 foreach $partName (@ARGV){
 
     #  Prepare the invocation of the part file.
@@ -359,6 +382,9 @@ foreach $partName (@ARGV){
             $bookContents =~ s/SONG/$song/g ; 
             $bookContents =~ s/POET/$poet/g ;  
             writeFile($bookFile, "score part file", $bookContents) ; 
+
+            # Make the song manifest entry
+            push(@manifestScores, "                \"$poet\": { fileSuffix: \"$partName\" },");
 
         } else { 
 
@@ -425,6 +451,9 @@ foreach $partName (@ARGV){
             #$staffSoundContents =~ s/INSTRUMENT/$variableName/g ;
             #$staffSoundContents =~ s/POET/$poet/g ;
             #writeFile($staffSoundFile, "staff file $staffSoundFile", $staffSoundContents) ; 
+
+            # Make the song manifest entry
+            push(@manifestParts, "                \"$poet\": { fileSuffix: \"$partName\" },");
         }
     }
 }
@@ -494,3 +523,17 @@ unlink $midiBookTemplateFile ;
 unlink $instrumentTemplateFile ; 
 #unlink $staffScoresTemplate ; 
 #unlink $staffPartsTemplate ; 
+
+#  Create the song manifest
+my $songManifesetTemplateFile = "manifest/SONG.js" ;
+my $songManifestFile = "manifest/songs/$song.js" ;
+my $songTitle = convertSongNameToTitle($song) ; 
+my $songManifestTemplateContents = slurpFile($songManifesetTemplateFile, "song manifest template") ; 
+$songManifestTemplateContents =~ s/TITLE/$songTitle/g ; 
+$songManifestTemplateContents =~ s/SONG/$song/g ;
+my $manifestPartsContents = join("\n", @manifestParts);
+my $manifestScoresContents = join("\n", @manifestScores);
+$songManifestTemplateContents =~ s/                PARTS/$manifestPartsContents/g;
+$songManifestTemplateContents =~ s/                SCORES/$manifestScoresContents/g;
+writeFile($songManifestFile, "song manifest file", $songManifestTemplateContents);
+
