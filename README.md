@@ -123,7 +123,12 @@ In addition, there may also be a file that is included by each staff file:
 
 Each staff group file, named an instrumental section, contains definitions of a staffgroups, which are mostly a collection of includes for the various staves in the staffgroup.   There are two versions since staves are often different based on whether the score is transposed or concert.
 
+### Manifest
 
+There is a template called manifest.js, which can be used when displaying files on the web using the manifeset project
+https://github.com/flaminghakama/manifest
+
+This manifest.js file defines metadata about the composition, information about the parts, and maps parts to "books". 
 
 # Using Templates
 

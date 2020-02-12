@@ -525,10 +525,10 @@ unlink $instrumentTemplateFile ;
 #unlink $staffPartsTemplate ; 
 
 #  Create the song manifest
-my $songManifesetTemplateFile = "manifest/SONG.js" ;
-my $songManifestFile = "manifest/songs/$song.js" ;
+my $manifesetTemplateFile = "$templateDir/manifest.js" ;
+my $songManifestFile = "$songDir/manifest.js" ;
 my $songTitle = convertSongNameToTitle($song) ; 
-my $songManifestTemplateContents = slurpFile($songManifesetTemplateFile, "song manifest template") ; 
+my $songManifestTemplateContents = slurpFile($manifesetTemplateFile, "song manifest template") ; 
 $songManifestTemplateContents =~ s/TITLE/$songTitle/g ; 
 $songManifestTemplateContents =~ s/SONG/$song/g ;
 my $manifestPartsContents = join("\n", @manifestParts);
