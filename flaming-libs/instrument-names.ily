@@ -54,14 +54,18 @@ tenorSaxophoneINameOnly = \markup \concat { "Tenor Saxophone I in B" \hspace #0.
 tenorSaxophoneIINameOnly = \markup \concat { "Tenor Saxophone II in B" \hspace #0.1 \raise #0.35 \flat }
 baritoneSaxophoneNameOnly = \markup \concat { "Baritone Saxophone in E" \hspace #0.1 \raise #0.35 \flat }
 
+trumpetNameOnly = \markup \concat { "Trumpet I in B" \teeny " " \hspace #0.1 \raise #0.35 \flat }
 trumpetINameOnly = \markup \concat { "Trumpet I in B" \teeny " " \hspace #0.1 \raise #0.35 \flat }
 trumpetIINameOnly = \markup \concat { "Trumpet II in B" \teeny " " \hspace #0.1 \raise #0.35 \flat }
 trumpetIIINameOnly = \markup \concat { "Trumpet III in B" \teeny " " \hspace #0.1 \raise #0.35 \flat }
 trumpetIVNameOnly = \markup \concat { "Trumpet IV in B" \teeny " " \hspace #0.1 \raise #0.35 \flat }
+tromboneNameOnly = "Trombone"
 tromboneINameOnly = "Trombone I"
 tromboneIINameOnly = "Trombone II"
 tromboneIIINameOnly = "Trombone III"
 tromboneIVNameOnly = "Trombone IV"
+
+hornNameOnly = \markup \concat { "Horn in F" }
 
 voiceNameOnly = "Voice"
 
@@ -117,14 +121,18 @@ tenorSaxophoneIName = \markup \formatInstrumentName \tenorSaxophoneINameOnly
 tenorSaxophoneIIName = \markup \formatInstrumentName \tenorSaxophoneIINameOnly
 baritoneSaxophoneName = \markup \formatInstrumentName \baritoneSaxophoneNameOnly
 
+trumpetName = \markup \formatInstrumentName \trumpetNameOnly
 trumpetIName = \markup \formatInstrumentName \trumpetINameOnly
 trumpetIIName = \markup \formatInstrumentName \trumpetIINameOnly
 trumpetIIIName = \markup \formatInstrumentName \trumpetIIINameOnly
 trumpetIVName = \markup \formatInstrumentName \trumpetIVNameOnly
+tromboneName = \markup \formatInstrumentName \tromboneNameOnly
 tromboneIName = \markup \formatInstrumentName \tromboneINameOnly
 tromboneIIName = \markup \formatInstrumentName \tromboneIINameOnly
 tromboneIIIName = \markup \formatInstrumentName \tromboneIIINameOnly
 tromboneIVName = \markup \formatInstrumentName \tromboneIVNameOnly
+
+hornName = \markup \formatInstrumentName \hornNameOnly
 
 voiceName = \markup \formatInstrumentName \voiceNameOnly
 
