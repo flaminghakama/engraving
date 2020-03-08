@@ -11,6 +11,17 @@ echo "-=-"
 echo "removing workspace"
 rm *.sublime-workspace
 
+if [ "$PDF" == "pdf" ]; then
+	echo "-=-"
+	echo "Committing pdf files"
+	cd pdf
+	PDF_FILES=`find . -type f | grep '.pdf'`
+	git add $PDF_FILES
+	git commit -m"$MESSAGE" $PDF_FILES
+	git push origin master
+	cd ..
+fi
+
 FILES="ly midi *.sublime-project buildParts.sh .gitignore .gitmodules README.md"
 if [ "$PDF" == "pdf" ]; then
 	FILES="$FILES pdf"
@@ -25,12 +36,3 @@ echo "git commit -m'$MESSAGE' $FILES"
 git commit -m"$MESSAGE" $FILES
 git push origin master
 
-if [ "$PDF" == "pdf" ]; then
-	echo "-=-"
-	echo "Committing pdf files"
-	cd pdf
-	PDF_FILES=`find . -type f | grep -v '.git' | grep -v README`
-	git add $PDF_FILES
-	git commit -m"$MESSAGE" $PDF_FILES
-	git push origin master
-fi
