@@ -54,7 +54,7 @@ tenorSaxophoneINameOnly = \markup \concat { "Tenor Saxophone I in B" \hspace #0.
 tenorSaxophoneIINameOnly = \markup \concat { "Tenor Saxophone II in B" \hspace #0.1 \raise #0.35 \flat }
 baritoneSaxophoneNameOnly = \markup \concat { "Baritone Saxophone in E" \hspace #0.1 \raise #0.35 \flat }
 
-trumpetNameOnly = \markup \concat { "Trumpet I in B" \teeny " " \hspace #0.1 \raise #0.35 \flat }
+trumpetNameOnly = \markup \concat { "Trumpet in B" \teeny " " \hspace #0.1 \raise #0.35 \flat }
 trumpetINameOnly = \markup \concat { "Trumpet I in B" \teeny " " \hspace #0.1 \raise #0.35 \flat }
 trumpetIINameOnly = \markup \concat { "Trumpet II in B" \teeny " " \hspace #0.1 \raise #0.35 \flat }
 trumpetIIINameOnly = \markup \concat { "Trumpet III in B" \teeny " " \hspace #0.1 \raise #0.35 \flat }
