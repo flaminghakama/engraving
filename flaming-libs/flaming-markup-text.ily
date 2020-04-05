@@ -31,6 +31,7 @@ tutti = <>^\markup \raise #markingPadding "Tutti"
 sim = <>^\markup \raise #markingPadding "sim."
 
 pizz = <>^\markup \raise #markingPadding \italic "pizz."
+lhPizz = <>^\markup \raise #markingPadding \italic "l.h. pizz."
 arco = <>^\markup \raise #markingPadding \italic "arco" 
 stillArco = <>^\markup \raise #markingPadding { "(" \italic arco ")" } 
 soli = <>^\markup \raise #markingPadding \italic "Soli" 

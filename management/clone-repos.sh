@@ -74,12 +74,13 @@ git commit -m "'added $SONG_PDF module'" .gitmodules pdf
 cd pdf
 git submodule init
 
-cp manifest.js pdf/manifest.js
-cd pdf 
-git add manifest.js
-git commit -m"moving manifest to pdf" manifest.js
+if [ -f "manifest.js" ] ; then 
+	cp manifest.js pdf/manifest.js
+	cd pdf 
+	git add manifest.js
+	git commit -m"moving manifest to pdf" manifest.js
 
-cd ..
-git rm manifest.js
-git commit -m"moving manifest to pdf" manifest.js
-
+	cd ..
+	git rm manifest.js
+	git commit -m"moving manifest to pdf" manifest.js
+fi

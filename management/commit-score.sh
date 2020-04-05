@@ -15,7 +15,7 @@ if [ "$PDF" == "pdf" ]; then
 	echo "-=-"
 	echo "Committing pdf files"
 	cd pdf
-	PDF_FILES=`find . -type f | grep '.pdf'`
+	PDF_FILES=`find . -type f | egrep '.pdf|.js'`
 	git add $PDF_FILES
 	git commit -m"$MESSAGE" $PDF_FILES
 	git push origin master
