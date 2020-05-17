@@ -62,3 +62,7 @@ echo "-=-"
 echo "Use relative paths for includes"
 perl -p -i -e "s/.*header.ily.*/\#(ly:set-option 'relative-includes \#t)\n\\\\include \"ly\/structures\/header.ily\"/g" ly/parts/*.ly
 
+echo "-=-"
+echo "Use relative paths for includes"
+perl -p -i -e "s/.*header.ily.*/\#(ly:set-option 'relative-includes \#t)\n\\\\include \"ly\/structures\/header.ily\"/g" ly/parts/*.ly
+
