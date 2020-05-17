@@ -29,8 +29,6 @@ fi
 ORIGINAL_LILY_SONG_DIR="$ORIGINAL_SONG_DIR/ly/$SONG" 
 
 if [ ! -d "$ORIGINAL_LILY_SONG_DIR" ]; then
-	source $ORIGINAL_LILY_SONG_DIR
-else
 	echo "Could not find the original lilypond directory ($ORIGINAL_LILY_SONG_DIR)"
 	exit 1
 fi

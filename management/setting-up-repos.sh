@@ -6,11 +6,15 @@
 function showHelp {
 	echo "setting-up-repos.sh Usage:"
 	echo "    ./management/setting-up-repos.sh SONG [ ORIGINAL_SONG_DIR ]?"
+	echo ""
+	echo "Displays commands used to"
+	echo "Clone the git repos for SONG (lilypond and pdf)"
+	echo "If ORIGINAL_SONG_DIR is specified, copies and updates lilypond code"
+	echo ""
+	echo "Exampes:"
 	echo "    ./management/setting-up-repos.sh my-song-name"
 	echo "    ./management/setting-up-repos.sh my-song-name /Users/elaine/git/scores/alt.musica"
 	echo ""
-	echo "Clone the git repos for SONG (lilypond and pdf)"
-	echo "If ORIGINAL_SONG_DIR is specified, copies and updates lilypond code"
 	exit 1	
 }
 
@@ -40,7 +44,7 @@ source $ENGRAVING_DIR/management/set-variables.sh
 
 echo "-=-"
 echo "Calling script to clone git repos"
-echo $CLONE_REPOS_SCRIPT $SONG
+$CLONE_REPOS_SCRIPT $SONG
 
 if [ "$COPY" == "yes" ]; then
 
@@ -49,8 +53,8 @@ if [ "$COPY" == "yes" ]; then
 	#  ####################  #
 
 	echo "-=-"
-	echo "Calling script to update project file" 
-	echo $COPY_SOURCE_SCRIPT $SONG
+	echo "Calling script to update previous source" 
+	$COPY_SOURCE_SCRIPT $SONG
 
 	#  ###################  #
 	#  UPDATE PROJECT FILE  #
@@ -58,7 +62,7 @@ if [ "$COPY" == "yes" ]; then
 
 	echo "-=-"
 	echo "Calling script to update project file" 
-	echo $UPDATE_PROJECT_FILE_SCRIPT $SONG
+	$UPDATE_PROJECT_FILE_SCRIPT $SONG
 
 	#  #######################  #
 	#  RECREATE THE BUILD FILE  #
@@ -66,7 +70,7 @@ if [ "$COPY" == "yes" ]; then
 
 	echo "-=-"
 	echo "Calling script to recreate the build file" 
-	echo $RECREATE_BUILD_FILE_SCRIPT $SONG
+	$RECREATE_BUILD_FILE_SCRIPT $SONG
 
 	#  ############################  #
 	#  UPDATE PATHS IN SOURCE FILES  # 
@@ -74,5 +78,5 @@ if [ "$COPY" == "yes" ]; then
 
 	echo "-=-"
 	echo "Calling script to update source files" 
-	echo $UPDATE_SOURCE_FILES_SCRIPT $SONG
+	$UPDATE_SOURCE_FILES_SCRIPT $SONG
 fi

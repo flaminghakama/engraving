@@ -43,12 +43,20 @@ echo "Update instrument files for includes"
 perl -p -i -e "'s|$SONG_REGEXP/||g'" ly/instruments/*.ily
 
 echo "-=-"
-echo "Update music files for includes"        
-perl -p -i -e "'s|$SONG_REGEXP/||g'" ly/music/*.ily
+if [ -d ly/music ] ; then   	
+	echo "Update music files for includes"      
+	perl -p -i -e "'s|$SONG_REGEXP/||g'" ly/music/*.ily
+fi
+if [ -d ly/instruments ] ; then   	
+	echo "Update instrument files for includes"      
+	perl -p -i -e "'s|$SONG_REGEXP/||g'" ly/instruments/*.ily
+fi
 
 echo "-=-"
-echo "Updating includes for staves"
-perl -p -i -e 's|include.*staff-defaults.ily|include \"staff-defaults.ily|g' ly/staves/*/*.ily
+if [ -d ly/staves ] ; then
+	echo "Updating includes for staves"
+	perl -p -i -e 's|include.*staff-defaults.ily|include \"staff-defaults.ily|g' ly/staves/*/*.ily
+fi
 
 echo "-=-"
 echo "Use relative paths for includes"

@@ -29,8 +29,15 @@ one named for the song pdfs.
 The naming convention is lower-kebab-case for the song, and appending -pdf for the pdf.
 Example: "my-song" and "my-song-pdf"
 
+Description is ???
+song repo is private
+pdf repo is public
+
 READMEs are necessary, but the content unimportant.  
+
 Choose a Lilypond .gitignore for the song repo, but do not create a .gitignore for the pdf repo.
+
+(no license necessary atm)
 
 ## Migration from scores
 
