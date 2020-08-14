@@ -76,6 +76,14 @@ thirdTimeBelow = <>_\markup \raise #markingPadding { \medium \bold "3rd X" }
 fourthTime = <>^\markup \raise #markingPadding { \medium \bold "4th X" }
 fourthTimeBelow = <>_\markup \raise #markingPadding { \medium \bold "4th X" }
 
+doubleBar = #(define-music-function
+    ()
+    ()
+    #{
+        \showMeasureNumber
+        \bar "||"
+    #})
+
 startSectionNoBarline = #(define-music-function
     (sectionName)
     (markup?)
@@ -92,6 +100,49 @@ startSection = #(define-music-function
         \bar "||"
         \mark \markup { \box #sectionName } 
     #})
+
+startSectionMidbar = #(define-music-function
+    (sectionName)
+    (markup?)
+    #{
+        \bar "" \noBreak \noPageBreak
+        \mark \markup { \box #sectionName } 
+    #})
+
+startSectionMidbarShortRepeat = #(define-music-function
+    (sectionName)
+    (markup?)
+    #{
+        \bar "[:" \noBreak \noPageBreak
+        \mark \markup { \box #sectionName } 
+    #})
+
+startSectionMidbarEndShortRepeat = #(define-music-function
+    (sectionName)
+    (markup?)
+    #{
+        \bar ":]" \noBreak \noPageBreak
+        \mark \markup { \box #sectionName } 
+    #})
+
+startSectionMidbarDoubleShortRepeat = #(define-music-function
+    (sectionName repeatLabel)
+    (markup? markup?)
+    #{
+        \bar ":][:" \noBreak \noPageBreak
+        \mark \markup { \box #sectionName \bold #repeatLabel } 
+    #})
+
+startSectionWithRepeatDouble = #(define-music-function
+    (repeatLabel sectionLabelOne sectionLabelTwo)
+    (markup? markup? markup?)
+    #{
+        \showMeasureNumber
+        \mark \markup { \bold #repeatLabel \box #sectionLabelOne \box #sectionLabelTwo } 
+    #})
+
+
+
 
 startSectionWithLabel = #(define-music-function
     (sectionName sectionLabel)
