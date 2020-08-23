@@ -76,13 +76,21 @@ thirdTimeBelow = <>_\markup \raise #markingPadding { \medium \bold "3rd X" }
 fourthTime = <>^\markup \raise #markingPadding { \medium \bold "4th X" }
 fourthTimeBelow = <>_\markup \raise #markingPadding { \medium \bold "4th X" }
 
-doubleBar = #(define-music-function
-    ()
-    ()
+showMeasureNumber = {
+  \once \override Score.BarNumber.break-visibility = ##(#f #t #t)
+}
+
+showSection = #(define-music-function
+    (sectionName)
+    (markup?)
     #{
-        \showMeasureNumber
-        \bar "||"
+        \mark \markup { \box #sectionName } 
     #})
+
+doubleBar = { 
+    \showMeasureNumber
+    \bar "||"
+}
 
 startSectionNoBarline = #(define-music-function
     (sectionName)
@@ -117,6 +125,14 @@ startSectionMidbarShortRepeat = #(define-music-function
         \mark \markup { \box #sectionName } 
     #})
 
+startSectionMidbarShortRepeatLabel = #(define-music-function
+    (sectionName repeatLabel)
+    (markup? markup?)
+    #{
+        \bar "[:" \noBreak \noPageBreak
+        \mark \markup { \box #sectionName \bold #repeatLabel } 
+    #})
+
 startSectionMidbarEndShortRepeat = #(define-music-function
     (sectionName)
     (markup?)
@@ -125,7 +141,7 @@ startSectionMidbarEndShortRepeat = #(define-music-function
         \mark \markup { \box #sectionName } 
     #})
 
-startSectionMidbarDoubleShortRepeat = #(define-music-function
+startSectionMidbarDoubleShortRepeatLabel = #(define-music-function
     (sectionName repeatLabel)
     (markup? markup?)
     #{
@@ -140,9 +156,6 @@ startSectionWithRepeatDouble = #(define-music-function
         \showMeasureNumber
         \mark \markup { \bold #repeatLabel \box #sectionLabelOne \box #sectionLabelTwo } 
     #})
-
-
-
 
 startSectionWithLabel = #(define-music-function
     (sectionName sectionLabel)
@@ -209,9 +222,14 @@ startSectionWithRepeatTripleAndStyle = #(define-music-function
         \mark \markup { \bold #repeatLabel \box #sectionLabelOne \box #sectionLabelTwo \box #sectionLabelThree \bold #styleLabel } 
     #})
 
-showMeasureNumber = {
-  \once \override Score.BarNumber.break-visibility = ##(#f #t #t)
-}
+startSectionMidbarDoubleRepeat = #(define-music-function
+    (sectionName repeatLabel)
+    (markup? markup?)
+    #{
+        \bar ":][:" \noBreak \noPageBreak
+        \mark \markup { \box #sectionName \bold #repeatLabel } 
+    #})
+
 #(define (double-bar-number increase-amount)
     (lambda (barnum measure-pos alt-number context)
         #{

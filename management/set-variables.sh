@@ -34,4 +34,5 @@ ALT_JAZZ_STRING_PARTS="Violin-I Violin-II Viola Cello Bass"
 ALT_JAZZ_RHYTHM_PARTS="Voice Clave Drums Piano"
 ALT_JAZZ_SCORES="Score-Transposed Score-Concert Lead-Sheet Score-Sound"
 ALT_JAZZ_PARTS="$ALT_JAZZ_WOODWIND_PARTS $ALT_JAZZ_BRASS_PARTS $ALT_JAZZ_STRING_PARTS $ALT_JAZZ_RHYTHM_PARTS $ALT_JAZZ_SCORES"
+SAX_QUARTET_ARRANGEMENT="Soprano-Saxophone-in-Bb Alto-Saxophone-in-Eb Tenor-Saxophone-in-Bb Baritone-Saxophone-in-Eb Score-Transposed Score-Sound"
 

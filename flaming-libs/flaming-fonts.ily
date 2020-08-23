@@ -60,6 +60,6 @@
     \override DynamicText #'font-family = #'sebastiano   % or haydn, gutenberg, Beethoven
     %\override NoteHead #'font-family = #'scorlatti    % or lv-goldenage, scorlatti, Paganini, Gonville, Beethoven
     %\override Script #'font-family = #'lv-goldenage      % or Beethoven i.e., the articulations
-    \override TrillSpanner #'font-family = #'scorlatti   % or Paganini
+    %\override TrillSpanner #'font-family = #'scorlatti   % or Paganini
 }  
 

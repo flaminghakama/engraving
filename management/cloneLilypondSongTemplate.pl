@@ -273,12 +273,12 @@ sub getBookLineFromPart {
 #  Get the song name
 my $song = shift(@ARGV) ; 
 my $songDir = "scores/$song" ; 
+`if [ ! -d "$songDir" ]; then mkdir $songDir; fi` ;  
 my $lyDir = "$songDir/ly" ; 
 
 #  Get the template and copy it to the song directory
 my $templateName = shift(@ARGV) ; 
 my $templateDir = "templates/$templateName" ; 
-`mkdir $songDir` ;  
 `cp -R $templateDir/* $songDir` ;  
 
 #  Make a copy of the sublime text project for the song and remove the template 
