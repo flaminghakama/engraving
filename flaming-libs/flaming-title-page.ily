@@ -14,7 +14,7 @@
                     \fontsize #6 \italic { #composer } 
                 }
                 \combine \null \vspace #6
-                \fill-line { \fontsize #12 \italic \bold { #title } }
+                \fill-line { \fontsize #12 \italic \bold \line { " " #title } }
             }
         #}
     )
