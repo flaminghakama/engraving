@@ -10,6 +10,13 @@ function stitchTitlePage {
 	rm "$SONG-$INSTRUMENT-title-page.pdf" "pdf/$SONG-$INSTRUMENT-title-page.pdf"
 }
 
+function bookifyThreePage { 
+	SONG=$1
+	INSTRUMENT=$2
+	python $PART_FORMAT_DIR/bookify-3page.py "pdf/$SONG-$INSTRUMENT.pdf" "$SONG-$INSTRUMENT.pdf"
+	mv "$SONG-$INSTRUMENT.pdf" pdf/printable
+}
+
 function bookifyFourPage { 
 	SONG=$1
 	INSTRUMENT=$2
@@ -37,6 +44,12 @@ function bookifySevenPage {
 	SONG=$1
 	INSTRUMENT=$2
 	python $PART_FORMAT_DIR/bookify-7page.py pdf/$SONG-$INSTRUMENT.pdf pdf/printable/$SONG-$INSTRUMENT.pdf manual
+}
+
+function bookifyEightPage {
+	SONG=$1
+	INSTRUMENT=$2
+	python $PART_FORMAT_DIR/bookify-8page.py pdf/$SONG-$INSTRUMENT.pdf pdf/printable/$SONG-$INSTRUMENT.pdf manual
 }
 
 function combineFivePageFivePage {
