@@ -129,6 +129,12 @@ flamingChordNames = {
 }
 flamingChordExceptions = #(append (sequential-music-to-chord-exceptions flamingChordNames #t) ignatzekExceptions)
 
+useFlamingChords = {
+    \set chordChanges = ##t 
+    \set chordNameExceptions = #flamingChordExceptions
+    \set noChordSymbol = ##f
+}
+
 
 % Macro to print single slash
 rs = {
