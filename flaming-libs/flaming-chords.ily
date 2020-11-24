@@ -18,6 +18,7 @@ flamingChordNames = {
     <c e-flat g>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \tiny { \char ##x2013 } } }
     <c e-flat g a>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \tiny { \char ##x2013 } \magnify #0.2 { "  " }} \raise #0.7 \normalsize 6 }
     <c e-flat g b-flat>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \tiny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.7 \normalsize 7 }
+    <c e-flat g b-flat f'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \tiny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.7 \normalsize 11 }
 
     <c e-flat g b>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \tiny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.7 {  \magnify #0.5 { " " \triangle ##f } \small 7 } }
     <c e-flat g b d'>1-\markup { 
@@ -61,6 +62,7 @@ flamingChordNames = {
     <c e g b-flat d' f' a-flat'>1-\markup { \raise #0.7 { \normalsize 11 } \raise #0.9 { \small " b13" } }
     <c e g b-flat cs' d' a'>1-\markup { \raise #0.7 { \normalsize 13 } \raise #3.9 { \tiny \center-column { \lower #1.25 { " 9" } " b9" } } }
     <c e g b-flat c-sharp' d-sharp'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.9 { \tiny \center-column { \lower #1.25 { " b9" } " #9" } } }
+    <c e g b-flat d-flat' f-sharp' a'>1-\markup { \raise #0.7 { \normalsize 13 } \raise #3.9 { \tiny \center-column { \lower #1.25 { " b9" } " #11" } } }
 
     % Dominant b5
     <c e g-flat b-flat>1-\markup { \raise #0.7 { \normalsize 7 } \raise #1.0 { \small " b5" } }
@@ -90,6 +92,9 @@ flamingChordNames = {
         \raise #0.4 { \magnify #1.3 { + } } 
         \raise #0.7 { \magnify #0.5 { " " \triangle ##f } \normalsize 7 }
         \raise #3.8 { \tiny \center-column { \lower #1.25 { "  9" } " #9" \raise #1.25 "#11" } } 
+    }
+    <c e g-sharp b-flat d-flat' f-sharp'>1-\markup { 
+        \raise #0.4 { \magnify #1.3 { + } } \raise #0.5 { \normalsize 7 } \raise #3.9 { \tiny \center-column { \lower #1.25 { " b9" } " #11" } }
     }
 
     % Lydian 
