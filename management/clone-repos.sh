@@ -7,7 +7,7 @@
 
 function showCloneHelp {
 	echo "clone-repos.sh Usage:"
-	echo "    ./management/clone-repos.sh SONG ORIGINAL_SONG_DIR"
+	echo "    ./management/clone-repos.sh SONG"
 	echo "    ./management/clone-repos.sh my-song-name /Users/elaine/git/scores/alt.musica"
 	exit 1	
 }
@@ -36,7 +36,7 @@ source $ENGRAVING_DIR/management/set-variables.sh
 echo "-=-"
 echo "Clone the lilypond repo $LILYPOND_REPO_URL into $SCORES_DIR"
 cd $SCORES_DIR
-git clone $LILYPOND_REPO_URL
+git clone --recurse-submodules $LILYPOND_REPO_URL
 
 echo "-=-"
 echo "cd $SONG_DIR" 
@@ -62,7 +62,7 @@ git add .gitignore
 echo "-=-"
 echo "Committing and pushing update to README.md and .gitignore"
 git commit -m"Updating README" $README_FILE .gitignore
-git push origin master
+git push
 
 echo "-=-"
 echo "Nest the PDF repo inside the lilypond repo"
