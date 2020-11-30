@@ -154,10 +154,14 @@ cp -R alt.musica my-template
 
 Within templates/my-template, update the following files:
 
+  ly/structures/header.ily
 * ly/structures/forms.ily
 * ly/structures/chords.ily
 * ly/structures/lyrics.ily
 * ly/music/INSTRUMENT.ily
+  ly/books/BOOK.ily
+  ly/books/MIDI.ily
+  ly/books/SCORE.ily
 
 Then, you can clone this new template and start creative work:
 

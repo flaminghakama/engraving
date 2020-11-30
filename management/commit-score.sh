@@ -34,5 +34,5 @@ echo "-=-"
 echo "committing with message '$MESSAGE'"
 echo "git commit -m'$MESSAGE' $FILES"
 git commit -m"$MESSAGE" $FILES
-git push origin master
+git push 
 

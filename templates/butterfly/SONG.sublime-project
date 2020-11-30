@@ -1,0 +1,68 @@
+{
+    "folders":
+    [
+        {
+            "path": ".",
+            "name": "Song",
+            "file_exclude_patterns": [".git*", "*ideas*", "*.pdf"],
+            "folder_exclude_patterns": ["ly", "pdf", "midi"]
+        },
+        {
+            "path": "../../flaming-libs",
+            "name": "Libraries",
+            "file_exclude_patterns": [".git*", "LICENSE", "README.md"],
+            "folder_exclude_patterns": ["none"]
+        },
+        {
+            "path": "ly/structures",
+            "name": "Structures",
+            "folder_exclude_patterns": ["none"]
+        },
+        {
+            "path": "ly/music",
+            "name": "Music",
+            "folder_exclude_patterns": ["none"]
+        },
+        {
+            "path": "ly/staves",
+            "name": "Staves",
+            "folder_exclude_patterns": ["none"]
+        },
+        {
+            "path": "ly/staffgroups",
+            "name": "Staff Groups",
+            "folder_exclude_patterns": ["none"]
+        },
+        {
+            "path": "ly/books",
+            "name": "Books",
+            "folder_exclude_patterns": ["none"]
+        },
+        {
+            "path": "ly/parts",
+            "name": "Parts",
+            "folder_exclude_patterns": ["none"]
+        },
+        {
+            "path": "pdf",
+            "name": "PDF",
+            "file_exclude_patterns": [".gi*", "LICENSE", "README.md"]
+        },
+        {
+            "path": "../../management",
+            "name": "Scripts",
+            "file_exclude_patterns": ["none"]
+        }
+    ],
+    "settings":
+    {
+        "tab_size": 4
+    },
+    "build_systems":
+    [
+        {
+            "name": "List",
+            "cmd": ["ls"]
+        }
+    ]
+}
