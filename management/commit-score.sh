@@ -18,7 +18,7 @@ if [ "$PDF" == "pdf" ]; then
 	PDF_FILES=`find . -type f | egrep '.pdf|.js'`
 	git add $PDF_FILES
 	git commit -m"$MESSAGE" $PDF_FILES
-	git push origin master
+	git push
 	cd ..
 fi
 
