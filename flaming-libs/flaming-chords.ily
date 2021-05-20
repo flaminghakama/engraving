@@ -43,9 +43,17 @@ flamingChordNames = {
     % minor7 b13 as "- b13"
     <c e-flat g a-flat'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \tiny { \char ##x2013 } \magnify #0.1 { "  " }} \teeny " " \raise #1.2 { \tiny \flat } \teeny " " \raise #0.9 { \tiny "13" } }
     <c e-flat g b-flat a-flat'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \tiny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.9 { \small "  b13" } }
-    <c e-flat g b-flat d' a-flat'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \tiny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.7 \normalsize "9 b13" }
-     
+    <c e-flat g b-flat d' a-flat'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \tiny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.7 \normalsize "9 b13" }     
     <c e-flat g b a-flat'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \tiny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.7 {  \magnify #0.5 { " " \triangle ##f } \small 7 \teeny " " \raise #0.5 { \tiny \flat }  \magnify #0.1 { "  " } \raise #0.3 { \tiny "13" } } }
+    <c e-flat g b-flat d-flat' f-sharp'>1-\markup { 
+        \raise #0.6 { \magnify #0.2 { "  " } \tiny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.7 \normalsize 7
+        \raise #3.6 { 
+            \tiny \center-column { 
+                \lower #1.25 { " b9" } 
+                "#11" 
+            } 
+        }
+    }
 
     % Dominant
     <c e g a>1-\markup { \raise #0.7 { \normalsize 6 } }
@@ -114,10 +122,10 @@ flamingChordNames = {
     <c e g b-flat f-sharp' a-flat'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.9 { \tiny \center-column { \lower #1.25 { " b13" } " #11" } } }
 
     % Suspended
-    <c f g>1-\markup { \raise #0.7 { \normalsize "sus" } }
-    <c f g b-flat>1-\markup { \raise #0.4 { \small "sus" } \raise #0.5 { \normalsize 7 } }
-    <c f g b-flat d'>1-\markup { \raise #0.4 { \small "sus" } \raise #1.0 \small 9 }
-    <c f g d-flat'>1-\markup { \raise #0.4 { \small "sus" } \raise #1.2 { \teeny " " \tiny \flat \tiny "9" } }
+    <c f g>1-\markup { \raise #0.7 { \normalsize " sus" } }
+    <c f g b-flat>1-\markup { \raise #0.4 { \small " sus" } \raise #0.5 { \normalsize 7 } }
+    <c f g b-flat d'>1-\markup { \raise #0.4 { \small " sus" } \raise #1.0 \small 9 }
+    <c f g d-flat'>1-\markup { \raise #0.4 { \small " sus" } \raise #1.2 { \teeny " " \tiny \flat \tiny "9" } }
     <c f g b-flat d-flat'>1-\markup { \raise #0.4 { \small " sus" } \raise #0.5 { \normalsize 7 } \raise #1.0 \small " b9" }
     <c f g-flat>1-\markup { \raise #0.4 { \small " sus" } \raise #1.2 { \teeny " " \tiny \flat \small 5 } }
     <c f g-flat b-flat d-flat'>1-\markup { \raise #0.4 { \small " sus" } \raise #0.5 { \normalsize 7 } \raise #1.0 \small " b5" \raise #1.0 \small " b9" }
