@@ -1,0 +1,24 @@
+# For an arrangement of a song
+
+input:
+
+
+list of song names
+list of part name = instrument + transposition
+
+
+in ./ly,  
+parts
+	<instrument>-<transposition>.ly
+books
+	<instrument>-<transposition>.ily
+content
+	<song>/header.ily
+	<song>/forms.ily
+	<song>/chords.ily
+	<song>/lyrics.ily
+	<song>/music.ily
+
+
+
+# For an list of songs 
