@@ -28,31 +28,70 @@ voltaLast = \markup { \text \italic \large { last X } }
 %
 %  \set Score.repeatCommands = #'((volta #f)) 
 
-voltaDoubleCustom = #(define-music-function (repMusicCommon repEndingA repMusicA repEndingB repMusicB) (ly:music? markup? ly:music? markup? ly:music?) #{
-  \set Score.repeatCommands = #'(start-repeat)
-  $repMusicCommon 
+voltaDoubleCustom = #(define-music-function 
+    (repMusicCommon repEndingA repMusicA repEndingB repMusicB) 
+    (ly:music? markup? ly:music? markup? ly:music?) 
+    #{
+        \set Score.repeatCommands = #'(start-repeat)
+        $repMusicCommon
 
-  \set Score.repeatCommands = #(list (list 'volta repEndingA))
-  $repMusicA
+        \set Score.repeatCommands = #(list 
+            (list 
+                'volta
+                #{ \markup \huge \override #'(font-encoding . latin1) #repEndingA #}
+            )
+        )
+        $repMusicA
 
-  \set Score.repeatCommands = #(list (list 'volta #f) 'end-repeat (list 'volta repEndingB))
-  $repMusicB
+        \set Score.repeatCommands = #(list 
+            (list 'volta #f)
+            'end-repeat
+            (list 
+                'volta
+                #{ \markup \huge \override #'(font-encoding . latin1) #repEndingB #}
+            )
+        )
+        $repMusicB
 
-  \set Score.repeatCommands = #'((volta #f))
-#})
+        \set Score.repeatCommands = #'((volta #f))
+    #}
+)
 
-voltaTripleCustom = #(define-music-function (repMusicCommon repEndingA repMusicA repEndingB repMusicB repEndingC repMusicC) (ly:music? markup? ly:music? markup? ly:music? markup? ly:music?) #{
-  \set Score.repeatCommands = #'(start-repeat)
-  $repMusicCommon 
+voltaTripleCustom = #(define-music-function 
+    (repMusicCommon repEndingA repMusicA repEndingB repMusicB repEndingC repMusicC) 
+    (ly:music? markup? ly:music? markup? ly:music? markup? ly:music?) 
+    #{
+        \set Score.repeatCommands = #'(start-repeat)
+        $repMusicCommon
 
-  \set Score.repeatCommands = #(list (list 'volta repEndingA))
-  $repMusicA
+        \set Score.repeatCommands = #(list 
+            (list 
+                'volta
+                #{ \markup \huge \override #'(font-encoding . latin1) #repEndingA #}
+            )
+        )
+        $repMusicA
 
-  \set Score.repeatCommands = #(list (list 'volta #f) 'end-repeat (list 'volta repEndingB))
-  $repMusicB
+        \set Score.repeatCommands = #(list 
+            (list 'volta #f)
+            'end-repeat
+            (list 
+                'volta
+                #{ \markup \huge \override #'(font-encoding . latin1) #repEndingB #}
+            )
+        )
+        $repMusicB
 
-  \set Score.repeatCommands = #(list (list 'volta #f) 'end-repeat (list 'volta repEndingC))
-  $repMusicC
+        \set Score.repeatCommands = #(list 
+            (list 'volta #f)
+            'end-repeat
+            (list 
+                'volta
+                #{ \markup \huge \override #'(font-encoding . latin1) #repEndingC #}
+            )
+        )
+        $repMusicC
 
-  \set Score.repeatCommands = #'((volta #f))
-#})
+        \set Score.repeatCommands = #'((volta #f))
+    #}
+)

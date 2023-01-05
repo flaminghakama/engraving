@@ -21,6 +21,7 @@
 \defineBarLine "S-double" #'("||" "S" "||")
 \defineBarLine "S||" #'("||" "S" "||")
 \defineBarLine "SS-double" #'("||" "SS" "||")
+\defineBarLine "SS[|:" #'("||" "SS[|:" "")
 \defineBarLine "S[|:" #'("||" "S[|:" "")
 \defineBarLine ":|]S" #'(":|]" "S" "")
 \defineBarLine ":|]S[|:" #'(":|]" "S[|:" "||")

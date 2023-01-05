@@ -12,6 +12,9 @@ structure = \relative c' {
     \override Beam.damping = #2.75 
     \override Stem.length-fraction = #(magstep 1.2)
 
+    \once \override Score.MetronomeMark #'extra-offset = #'( 0 . 0 )
+    \tempo 4=76
+
     \numericTimeSignature
     \time 4/4
     \key e \minor
