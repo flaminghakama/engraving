@@ -14,11 +14,22 @@ append_style(){
     echo "        color:\#916545;" >> $FILE
     echo "    }" >> $FILE
     echo "    H1,H2,H3,H4,H5,H6 {" >> $FILE
-    echo "        font-size:2.6em;" >> $FILE
     echo "        color:\#492e26;" >> $FILE
     echo "    }" >> $FILE
+    echo "    H1 {" >> $FILE
+    echo "        font-size:4em;" >> $FILE
+    echo "    }" >> $FILE
+    echo "    H2 {" >> $FILE
+    echo "        font-size:3.6em;" >> $FILE
+    echo "    }" >> $FILE
+    echo "    H3 {" >> $FILE
+    echo "        font-size:3.4em;" >> $FILE
+    echo "    }" >> $FILE
+    echo "    H4,H5,H6 {" >> $FILE
+    echo "        font-size:3em;" >> $FILE
+    echo "    }" >> $FILE
     echo "    UL {" >> $FILE
-    echo "        font-size:2em;" >> $FILE
+    echo "        font-size:3em;" >> $FILE
     echo "        list-style-type:none;" >> $FILE
     echo "        padding:0.4em 0.8em;" >> $FILE
     echo "    }" >> $FILE

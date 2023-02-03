@@ -38,9 +38,10 @@ revertCustomScripts = { \revert Script.before-line-breaking }
 
 #(define flaming-articulations
   '(
-    ("staccato" . ((padding . 0.6)))
-    ("accent" . ((padding . 0.6)))
-    ("tenuto" . ((padding . 0.8)))
+    ("staccato" . ((padding . 0.56)))
+    ("accent" . ((padding . 0.54)))
+    ("tenuto" . ((padding . 0.74)))
+    ("marcato" . ((padding . 0.6)))
     ("staccatissimo" . ((padding . 1)))
     ("segno" . ((padding . 2)))
     ))

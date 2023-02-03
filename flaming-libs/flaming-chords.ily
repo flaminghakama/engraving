@@ -126,23 +126,80 @@ flamingChordNames = {
     <c e g b-flat d-flat' f-sharp' a'>1-\markup { \raise #0.7 { \normalsize 13 } \raise #3.9 { \tiny \center-column { \lower #1.25 { " b9" } " #11" } } }
     <c e g b-flat d-flat' a-flat'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.9 { \tiny \column { \lower #1.25 { "   b9" } "  b13" } } }
 
+    
+    % Slash-only chords for F-/E# in C
+    % f:1.3-.5.8+.14-
+    % <c e-flat g c-sharp' bff'>1-\markup \whiteout { \hspace #-2 \line { "/E"  \normalsize \raise #0.5 \sharp } }
+
+    % Slash-only chords for F-/E in C
+    % f:1.3-.5.8+.14+
+    <c e-flat g c-sharp' b'>1-\markup \whiteout { \hspace #-2 \line { "/E" } }
+    
+    % Slash-only chords for F-/Eb in C
+    % f:1.3-.5.8+.14
+    <c e-flat g c-sharp' b-flat'>1-\markup \whiteout { \hspace #-2 \line { "/E" \normalsize \raise #0.5 \flat } }
+    
+    % Slash-only chords for F-/D# in C
+    % f:1.3-.5.8+.13+
+    <c e-flat g c-sharp' a-sharp'>1-\markup \whiteout { \hspace #-2 \line { "/D" \normalsize \raise #0.5 \sharp } }
+
+    % Slash-only chords for F-/D in C
+    % f:1.3-.5.8+.13
+    <c e-flat g c-sharp' a'>1-\markup \whiteout { \hspace #-2 \line { "/D" } }
+    
+    % Slash-only chords for F-/Db in C
+    % f:1.3-.5.8+.13-
+    <c e-flat g c-sharp' a-flat'>1-\markup \whiteout { \hspace #-2 \line { "/D" \normalsize \raise #0.5 \flat } }
+
+    % Slash-only chords for F-/C# in C
+    % f:1.3-.5.8+.12+
+    <c e-flat g c-sharp' g-sharp'>1-\markup \whiteout { \hspace #-2 \line { "/C" \normalsize \raise #0.5 \sharp } }
+    
+    % Slash-only chords for F-/C in C
+    % f:1.3-.5.8+.12
+    <c e-flat g c-sharp' g'>1-\markup \whiteout { \hspace #-2 \line { "/C" } }
+    
+    % Slash-only chords for F-/Cb in C
+    % f:1.3-.5.8+.12- 
+    <c e-flat g c-sharp' g-flat'>1-\markup \whiteout { \hspace #-2 \line { "/C" \normalsize \raise #0.5 \flat } }
+
+    % Slash-only chords for F-/B in C
+    % f:1.3-.5.8+.11+
+    <c e-flat g c-sharp' f-sharp'>1-\markup \whiteout { \hspace #-2 \line { "/B" } }
+    
+    % Slash-only chords for F-/Bb in C
+    % f:1.3-.5.8+.11
+    <c e-flat g c-sharp' f'>1-\markup \whiteout { \hspace #-2 \line { "/B" \normalsize \raise #0.5 \flat } }
+
+    % Slash-only chords for F-/A in C
+    % f:1.3-.5.8+.10
+    <c e-flat g c-sharp' e'>1-\markup \whiteout { \hspace #-2 \line { "/A" } }
+
+    % Slash-only chords for F-/Ab in C
+    % f:1.3-.5.8+.10-
+    <c e-flat g c-sharp' e-flat'>1-\markup \whiteout { \hspace #-2 \line { "/A" \normalsize \raise #0.5 \flat } }
+
+    % Slash-only chords for F-/G# in C
+    % f:1.3-.5.8+.9+
+    <c e-flat g c-sharp' d-sharp'>1-\markup \whiteout { \hspace #-2 \line { "/G" \normalsize \raise #0.5 \sharp } }
+
+    % Slash-only chords for F-/G in C
+    % f:1.3-.5.8+.9
+    <c e-flat g c-sharp' d'>1-\markup \whiteout { \hspace #-2 \line { "/G" } }
+
+    % Slash-only chords for F-/Gb in C
+    % f:1.3-.5.8+.9-
+    <c e-flat g c-sharp' d-flat'>1-\markup \whiteout { \hspace #-2 \line { "/G" \normalsize \raise #0.5 \flat } }
 
     % Slash-only chords for F-/F# in C
+    % f:1.3-.5.8+
     <c e-flat g c-sharp'>1-\markup \whiteout { \hspace #-2 \line { "/F" \normalsize \raise #0.5 \sharp } }
-    % Slash-only chords for F-/E in C
-    <c e-flat g c-sharp' b'>1-\markup \whiteout { \hspace #-2 \line { "/E" } }
-    % Slash-only chords for F-/Eb in C
-    <c e-flat g c-sharp' bf'>1-\markup \whiteout { \hspace #-2 \line { "/E" \normalsize \raise #0.5 \flat } }
-    % Slash-only chords for F-/D# in C
-    <c e-flat g c-sharp' as'>1-\markup \whiteout { \hspace #-2 \line { "/D" \normalsize \raise #0.5 \sharp } }
-    % Slash-only chords for F-/D in C
-    <c e-flat g c-sharp' a'>1-\markup \whiteout { \hspace #-2 \line { "/D" } }
-    % Slash-only chords for F-/C# in C
-    <c e-flat g c-sharp' g-sharp'>1-\markup \whiteout { \hspace #-2 \line { "/C" \normalsize \raise #0.5 \sharp } }
-    % Slash-only chords for F-/B in C
-    <c e-flat g c-sharp' f-sharp'>1-\markup \whiteout { \hspace #-2 \line { "/B" } }
 
-
+    % Slash-only chords for F-/F in C
+    % f:1.3-.5.8+.14-
+    <c e-flat g c-sharp' bff'>1-\markup \whiteout { \hspace #-2 \line { "/F" } }
+    
+    
 
     % Dominant b5
     <c e g-flat b-flat>1-\markup { \raise #0.7 { \normalsize 7 } \raise #1.0 { \small " b5" } }
