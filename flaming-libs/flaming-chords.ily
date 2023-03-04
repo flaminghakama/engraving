@@ -4,19 +4,19 @@
 flamingChordNames = {
 
     % Major
-    <c e g b>1-\markup { \raise #0.7 { \magnify #0.7 { " " \triangle ##f } \normalsize 7 } }
+    <c e g b>1-\markup { \raise #0.7 { \magnify #0.8 { " " \triangle ##f } \normalsize 7 } }
     <c e g d'>1-\markup { \raise #0.7 { \magnify #0.8 { " add" } \normalsize 9 } }
-    <c e g b d'>1-\markup { \raise #0.7 { \magnify #0.7 { " " \triangle ##f } \normalsize 9 } }
-    <c e g b a'>1-\markup { \raise #0.7 { \magnify #0.7 { " " \triangle ##f } \teeny " " \normalsize 13 } }
-    <c e g b d' a'>1-\markup { \raise #0.7 { \magnify #0.7 { " " \triangle ##f } \normalsize 13 } }
+    <c e g b d'>1-\markup { \raise #0.7 { \magnify #0.8 { " " \triangle ##f } \normalsize 9 } }
+    <c e g b a'>1-\markup { \raise #0.7 { \magnify #0.8 { " " \triangle ##f } \teeny " " \normalsize 13 } }
+    <c e g b d' a'>1-\markup { \raise #0.7 { \magnify #0.8 { " " \triangle ##f } \normalsize 13 } }
     <c e g a d'>1-\markup { \raise #3 { \tiny \center-column { \lower #1.25 { " 6" } " 9" } } }
     <c e g b d-sharp' f-sharp' a-flat'>1-\markup { 
-        \raise #0.7 { \magnify #0.7 { " " \triangle ##f } \normalsize 9 }
+        \raise #0.7 { \magnify #0.8 { " " \triangle ##f } \normalsize 9 }
         \raise #3.8 { \tiny \center-column { \lower #1.25 { "  #9" } "#11" \raise #1.25 { "b13" } } } 
     }
     <c e g d'>1-\markup { \raise #0.7 { \tiny "  add" \magnify #0.1 { \teeny " "  } \normalsize "9" } }
     <c e g b f-sharp' a'>1-\markup { 
-        \raise #0.7 { \magnify #0.7 { " " \triangle ##f " " } }
+        \raise #0.7 { \magnify #0.8 { " " \triangle ##f " " } }
         \raise #3.8 { \tiny \center-column { \lower #1.25 { " 13" } "#11" } } 
     }
 
@@ -207,6 +207,7 @@ flamingChordNames = {
     <c e g-flat b-flat a'>1-\markup { \raise #0.7 { \normalsize 13 } \raise #1.0 { \small " b5" } }
     <c e g-flat b-flat d-flat'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.8 { \tiny \center-column { \lower #1.5 { "b5" } " b9" } } }
     <c e g-flat b-flat d-flat' a'>1-\markup { \raise #0.7 { \normalsize 13 } \raise #3.8 { \tiny \center-column { \lower #1.5 { " b5" } " b9" } } }
+    <c e g-flat b-flat a-flat'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.8 { \tiny \center-column { \lower #1.5 { " b5" } " b13" } } }
 
     <c e g b-flat d-sharp' a-flat'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.8 { \tiny \center-column { \lower #1.5 { " #9" } " b13" } } }
 
@@ -249,11 +250,11 @@ flamingChordNames = {
     %    \raise #1.2 { \teeny " " \tiny "#11" }
     %}
     <c e g b f-sharp'>1-\markup { 
-        \raise #0.7 { \magnify #0.5 { " " \triangle ##f } }
+        \raise #0.7 { \magnify #0.8 { " " \triangle ##f } }
         \raise #1.2 { \teeny " " \tiny "#11" }
     }
-    <c e g b d' f-sharp'>1-\markup { \raise #0.7 { \magnify #0.5 { " " \triangle ##f } } \raise #3.4 { \teeny \center-column { \lower #1.25 { " 9" } " #11" } } }
-    <c e g b d' f-sharp' a'>1-\markup { \raise #0.7 { \magnify #0.5 { " " \triangle ##f } } \raise #3.4 { \teeny \center-column { \lower #1.25 { "   13" } " #11" } } }
+    <c e g b d' f-sharp'>1-\markup { \raise #0.7 { \magnify #0.8 { " " \triangle ##f } } \raise #3.4 { \teeny \center-column { \lower #1.25 { " 9" } " #11" } } }
+    <c e g b d' f-sharp' a'>1-\markup { \raise #0.7 { \magnify #0.8 { " " \triangle ##f } } \raise #3.4 { \teeny \center-column { \lower #1.25 { "   13" } " #11" } } }
     <c e g b-flat f-sharp'>1-\markup { \raise #0.5 { \magnify #1.2 { \normalsize 7 } } \raise #1.0 \tiny " #11" }
     <c e g b-flat f-sharp' a-flat'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.9 { \tiny \center-column { \lower #1.25 { " b13" } " #11" } } }
 

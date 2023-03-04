@@ -25,6 +25,7 @@
 \defineBarLine "S[|:" #'("||" "S[|:" "")
 \defineBarLine ":|]S" #'(":|]" "S" "")
 \defineBarLine ":|]S[|:" #'(":|]" "S[|:" "||")
+\defineBarLine ":|]SS[|:" #'(":|]" "SS[|:" "||")
 \defineBarLine "SS" #'("" "SS" "")
 
 startRepeat = { \bar "[|:" }
