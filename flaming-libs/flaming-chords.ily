@@ -114,6 +114,7 @@ flamingChordNames = {
     <c e g b-flat d-sharp'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #0.9 { \small " #9" } }
     <c e g b-flat c-sharp' d-sharp'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.9 { \tiny \center-column { \lower #1.25 { " b9" } " #9" } } }
     <c e g b-flat d-sharp' f-sharp'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.9 { \tiny \center-column { \lower #1.25 { " #9" } " #11" } } }
+    <c e g b-flat d-flat' f-sharp'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.9 { \tiny \center-column { \lower #1.25 { " b9" } " #11" } } }
     <c e g b-flat d' f-sharp' a'>1-\markup { \raise #0.7 { \normalsize 13 } \raise #1.2 { \tiny "#11" } }
     <c e g b-flat d' a'>1-\markup { \raise #0.7 { \normalsize 13 } }
     <c e g b-flat d-flat' a'>1-\markup { \raise #0.7 { \normalsize 13 } \raise #0.9 { \small " b9" } }
@@ -205,11 +206,12 @@ flamingChordNames = {
     <c e g-flat b-flat>1-\markup { \raise #0.7 { \normalsize 7 } \raise #1.0 { \small " b5" } }
     <c e g-flat b-flat d'>1-\markup { \raise #0.7 { \normalsize 9 } \raise #1.0 { \small " b5" } }
     <c e g-flat b-flat a'>1-\markup { \raise #0.7 { \normalsize 13 } \raise #1.0 { \small " b5" } }
-    <c e g-flat b-flat d-flat'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.8 { \tiny \center-column { \lower #1.5 { "b5" } " b9" } } }
+    <c e g-flat b-flat d-flat'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.8 { \tiny \center-column { \lower #1.5 { " b5" } " b9" } } }
     <c e g-flat b-flat d-flat' a'>1-\markup { \raise #0.7 { \normalsize 13 } \raise #3.8 { \tiny \center-column { \lower #1.5 { " b5" } " b9" } } }
     <c e g-flat b-flat a-flat'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.8 { \tiny \center-column { \lower #1.5 { " b5" } " b13" } } }
 
     <c e g b-flat d-sharp' a-flat'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.8 { \tiny \center-column { \lower #1.5 { " #9" } " b13" } } }
+    <c e g-flat b-flat d-sharp'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.8 { \tiny \center-column { \lower #1.5 { " b5" } " #9" } } }
 
 
     % Half-diminished
@@ -257,6 +259,15 @@ flamingChordNames = {
     <c e g b d' f-sharp' a'>1-\markup { \raise #0.7 { \magnify #0.8 { " " \triangle ##f } } \raise #3.4 { \teeny \center-column { \lower #1.25 { "   13" } " #11" } } }
     <c e g b-flat f-sharp'>1-\markup { \raise #0.5 { \magnify #1.2 { \normalsize 7 } } \raise #1.0 \tiny " #11" }
     <c e g b-flat f-sharp' a-flat'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.9 { \tiny \center-column { \lower #1.25 { " b13" } " #11" } } }
+    <c e g d-sharp' f-sharp'>1-\markup { " "
+        \raise #3.6 { 
+            \tiny \center-column { 
+                \lower #1.25 { " #9" } 
+                "#11" 
+            } 
+        }
+    }
+
 
     % Suspended
     <c f g>1-\markup { \raise #0.7 { \normalsize " sus" } }
