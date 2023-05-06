@@ -58,9 +58,13 @@
         \override Hairpin.minimum-length = #3
     }
     \override DynamicText #'font-family = #'sebastiano   % or haydn, gutenberg, Beethoven
+    
     %\override NoteHead #'font-family = #'scorlatti    % or lv-goldenage, scorlatti, Paganini, Gonville, Beethoven
-    % \override NoteHead #'font-family = #'lv-goldenage    % or lv-goldenage, scorlatti, Paganini, Gonville, Beethoven
+    % \override NoteHead #'font-family = #'beethoven
+    
     % \override Script #'font-family = #'lv-goldenage      % or Beethoven i.e., the articulations
+    \override Script #'font-family = #'beethoven
+    
     %\override TrillSpanner #'font-family = #'scorlatti   % or Paganini
     \override TrillSpanner #'font-family = #'paganini   % or Paganini
 }  
