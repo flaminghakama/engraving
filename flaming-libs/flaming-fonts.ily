@@ -63,7 +63,7 @@
     % \override NoteHead #'font-family = #'beethoven
     
     % \override Script #'font-family = #'lv-goldenage      % or Beethoven i.e., the articulations
-    \override Script #'font-family = #'beethoven
+    %\override Script #'font-family = #'beethoven
     
     %\override TrillSpanner #'font-family = #'scorlatti   % or Paganini
     \override TrillSpanner #'font-family = #'paganini   % or Paganini
