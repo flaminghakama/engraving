@@ -124,7 +124,8 @@ flamingChordNames = {
     <c e g b-flat c-sharp' d-sharp'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.9 { \tiny \center-column { \lower #1.25 { \line { " " \flat "9" } } " #9" } } }
     <c e g b-flat d-sharp' f-sharp'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.9 { \tiny \center-column { \lower #1.25 { " #9" } " #11" } } }
     <c e g b-flat d-flat' f-sharp'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.9 { \tiny \center-column { \lower #1.25 { \line { " " \flat "9" } } " #11" } } }
-    <c e g b-flat d' f-sharp' a'>1-\markup { \raise #0.7 { \normalsize 13 } \raise #1.2 { \tiny "#11" } }
+    <c e g b-flat d' f-sharp'>1-\markup { \raise #0.7 { \normalsize 9 } \raise #1.2 { \tiny " #11" } }
+    <c e g b-flat d' f-sharp' a'>1-\markup { \raise #0.7 { \normalsize 13 } \raise #1.2 { \tiny " #11" } }
     <c e g b-flat d' a'>1-\markup { \raise #0.7 { \normalsize 13 } }
     <c e g b-flat d-flat' a'>1-\markup { \raise #0.7 { \normalsize 13 } \raise #0.9 { \small \line { " " \flat "9" } } }
     <c e g b-flat a-flat'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #0.9 { \line { \small " " \tiny \flat \tiny "13" } } }
@@ -143,6 +144,17 @@ flamingChordNames = {
     <c e g b-flat d-flat' a-flat'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.9 { \tiny \center-column { \lower #1.25 { \line { " " \flat "9" } } \line { \flat "13" } } } }
     <c e g b-flat d-flat' f-sharp' a'>1-\markup { \raise #0.7 { \normalsize 13 } \raise #3.9 { \tiny \center-column { \lower #1.25 { " " \flat "9" } " #11" } } }
     <c e g b-flat d-flat' a-flat'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.9 { \tiny \column { \lower #1.25 { "    " \flat "9" } \line { "   " \flat "13" } } } }
+
+
+    % Slash-only chords for Bb7/Ab in C
+    <c e g b-flat cs'>1-\markup \whiteout { \hspace #-2 \line { "/A" \raise #0.0 \flat } }
+
+    % Slash-only chords for Bb7/Ab in Bb
+    <c e g b-flat cs' es'>1-\markup \whiteout { \hspace #-2 \line { "/B" \raise #0.0 \flat } }
+
+    % Slash-only chords for Bb7/Ab in Eb
+    <c e g b-flat cs' es' gs'>1-\markup \whiteout { \hspace #-2 "/F" }
+
 
     
     % Slash-only chords for F-/E# in C

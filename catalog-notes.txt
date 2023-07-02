@@ -13,9 +13,8 @@ Album 7 (set V): West Coast Jazz 1998-2006 (12)
 Album 8 (set VI): Lyrical Immersion 1998-2001 (13)
 Album 9 (set VII): Jazz Combustion Uprising 2010-2013 
 Album 10 (set VIII): Political Lyrics 2005-2013
-Album 10 (set IX): Period Jazz 2014-2016
-
-
+Album 11 (set IX): Period Jazz 2014-2016
+Album 12 (set X): Adventureous Instrumentals 2001-2019
 
 
 Album 1 (set I): Inaugural Jazz 1987-1989 (10-11)
@@ -220,6 +219,27 @@ Instrumental material written after moving to San Francisco
     Links to each song on soundcloud
     https://altjazz.org/scores/journeythem-instrumentals/#west
 
+    Readable
+
+        Cole St.
+        The Nymph
+        The Girl from LA (with the Scarlet-Rust Blouse)
+        Three Out of Four Nights
+        The Rhythm Method
+        Dusk in the Courtyard
+        Sixteen K Is A Lot of Kim
+
+    Needs rehearsal for content
+
+        Just a Dead Ringer for Monica Lewinsky
+        Presque Tire Sale in God's Country    
+
+    Needs rehearsal for content and arrangement
+
+        Apricot Admissions
+        Mossad
+        l'Amoureuse de mon Pere
+
 
 Album 8 (set VI):  Lyrical Immersion 1998-2001 (13)
 Expressive, intimate, lyric-based works
@@ -252,9 +272,8 @@ Expressive, intimate, lyric-based works
 
 Album 8: Jazz Combustion Uprising 2010-2013 (7)
 
-    Oxtail Soup
-    Series of Adjustments
     44 Magnum
+    Series of Adjust    Oxtail Soup
     Cupcake Flavor Prolfile
     Linsanity
     Promises Broken
@@ -271,18 +290,6 @@ Album 8: Jazz Combustion Uprising 2010-2013 (7)
     https://altjazz.org/scores/jazz-combustion/#combustion
 
 
-Album 9: Adventureous Instrumentals 2001-2019 (8)
-Modern, virtuostic cross-genre writing
-
-Don't Wait for Me
-	Self-Immolation
-	Lament
-Next Level Shit
-Aphrodite's Girl Friday
-    Big Seven
-
-
-
 Album 10 (set VIII): Period Jazz 2014-2016
 
     Hot Swing
@@ -293,6 +300,7 @@ Album 10 (set VIII): Period Jazz 2014-2016
     Swampy
     Bluesy Jump
     Bouncy Jump
+    Steppin' Jive
 
     Charts
     https://altjazz.org/scores/jazz-combustion/period-jazz-setlist-for-C.html
@@ -319,8 +327,15 @@ Bechaini (D. Sharma)
     Asparagus
     Taken All My Life (P. McMath)
 
-Album 14: Jazz Traditions 2010-2017 (11)
+Album 9: Adventureous Instrumentals 2001-2019 (8)
+Modern, virtuostic cross-genre writing
 
+Big Seven
+Don't Wait for Me
+Self-Immolation
+    Next Level Shit
+No Time Like the Present Future
+Blue Choice
 
 
 

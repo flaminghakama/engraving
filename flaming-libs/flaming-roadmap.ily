@@ -17,7 +17,7 @@
 % delSeg = \markup { \huge \bold "D.S." }
 % alCoda = \markup { \bold "al  " \musicglyph "scripts.coda"  }
 % dsAlCoda = \markup { \halign #-2 \center-column { \delSeg \alCoda } }
-dsAlCoda = \markup { \bold \huge "D.S. al" \translate #'(-2 . 0.8) \small \musicglyph "scripts.coda" }
+dsAlCoda = \markup { \bold \large "D.S. al" \translate #'(-2 . 0.8) \small \musicglyph "scripts.coda" }
 
 % dsCoda = \markup { \delSeg \alCoda }
 fineSign = \markup { \huge \bold "Fine" }
