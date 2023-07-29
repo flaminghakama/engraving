@@ -88,11 +88,34 @@ for transposition in $transpositions ; do cp $score/pdf/a-classic-base/a-classic
 
 score=jazz-combustion
 album=VII-jazz-combustion-uprising
-songs="44-magnum series-of-adjustments cupcake-flavor-profile oxtail-soup promises-broken linsanity no-time-like-the-present-future"
+songs="44-magnum series-of-adjustments cupcake-flavor-profile oxtail-soup aphrodites-girl-friday promises-broken linsanity no-time-like-the-present-future"
 
 for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/$song/$song-Lead-Sheet-$transposition.pdf newpdfs/$transposition/$album ; done ; done 
 for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/$song/$song-Lead-Sheet-$transposition.pdf newpdfs/all-songs-$transposition ; done ; done 
 for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/$song/$song-Lead-Sheet-$transposition.pdf newpdfs/all-songs-all-transpositions ; done ; done 
+
+score=lyrical-compositions
+album=VIII-political-lyrics
+songs="bike-lanes rising we-declare"
+for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/$song/$song-Lead-Sheet-$transposition.pdf newpdfs/$transposition/$album ; done ; done
+for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/$song/$song-Lead-Sheet-$transposition.pdf newpdfs/all-songs-$transposition ; done ; done 
+for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/$song/$song-Lead-Sheet-$transposition.pdf newpdfs/all-songs-all-transpositions ; done ; done 
+
+cp lyrical-compositions/pdf/we-declare/we-declare-Bass-for-C.pdf newpdfs/for-C/VIII-political-lyrics
+cp lyrical-compositions/pdf/we-declare/we-declare-Bass-for-C.pdf newpdfs/all-songs-for-C
+cp lyrical-compositions/pdf/we-declare/we-declare-Bass-for-C.pdf newpdfs/all-songs-all-transpositions
+
+cp lyrical-compositions/pdf/we-declare/we-declare-Voice-for-C.pdf newpdfs/for-C/VIII-political-lyrics
+cp lyrical-compositions/pdf/we-declare/we-declare-Voice-for-C.pdf newpdfs/all-songs-for-C
+cp lyrical-compositions/pdf/we-declare/we-declare-Voice-for-C.pdf newpdfs/all-songs-all-transpositions
+
+cp lyrical-compositions/pdf/we-declare/we-declare-Voice-for-Bb.pdf newpdfs/for-Bb/VIII-political-lyrics
+cp lyrical-compositions/pdf/we-declare/we-declare-Voice-for-Bb.pdf newpdfs/all-songs-for-Bb
+cp lyrical-compositions/pdf/we-declare/we-declare-Voice-for-Bb.pdf newpdfs/all-songs-all-transpositions
+
+cp lyrical-compositions/pdf/we-declare/we-declare-Voice-for-Eb.pdf newpdfs/for-Eb/VIII-political-lyrics
+cp lyrical-compositions/pdf/we-declare/we-declare-Voice-for-Eb.pdf newpdfs/all-songs-for-Eb
+cp lyrical-compositions/pdf/we-declare/we-declare-Voice-for-Eb.pdf newpdfs/all-songs-all-transpositions
 
 
 score=jazz-combustion
@@ -103,10 +126,21 @@ for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/
 for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/$song/$song-Lead-Sheet-$transposition.pdf newpdfs/all-songs-$transposition ; done ; done 
 for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/$song/$song-Lead-Sheet-$transposition.pdf newpdfs/all-songs-all-transpositions ; done ; done 
 
+for transposition in $transpositions ; do cd newpdfs/$transposition ; zip ../elaine-alt-lead-sheets-set-I-inaugural-jazz-$transposition.zip I-inaugural-jazz/*.pdf ; cd ../.. ; done
+for transposition in $transpositions ; do cd newpdfs/$transposition ; zip ../elaine-alt-lead-sheets-set-II-jazz-symphony-$transposition.zip II-jazz-symphony/*.pdf ; cd ../.. ; done
+for transposition in $transpositions ; do cd newpdfs/$transposition ; zip ../elaine-alt-lead-sheets-set-III-exploring-traditions-$transposition.zip III-exploring-traditions/*.pdf ; cd ../.. ; done
+for transposition in $transpositions ; do cd newpdfs/$transposition ; zip ../elaine-alt-lead-sheets-set-IV-modern-jazz-$transposition.zip IV-modern-jazz/*.pdf ; cd ../.. ; done    
+for transposition in $transpositions ; do cd newpdfs/$transposition ; zip ../elaine-alt-lead-sheets-set-V-west-coast-jazz-$transposition.zip V-west-coast-jazz/*.pdf; cd ../.. ; done
+for transposition in $transpositions ; do cd newpdfs/$transposition ; zip ../elaine-alt-lead-sheets-set-VI-lyrical-immersion-$transposition.zip ; cd ../.. ; done
+for transposition in $transpositions ; do cd newpdfs/$transposition ; zip ../elaine-alt-lead-sheets-set-VII-jazz-combustion-uprising-$transposition.zip VII-jazz-combustion-uprising/*.pdf ; cd ../.. ; done
+for transposition in $transpositions ; do cd newpdfs/$transposition ; zip ../elaine-alt-lead-sheets-set-IX-period-jazz-$transposition.zip IX-period-jazz/*.pdf X-adventurous-instrumentals/*.pdf ; cd ../.. ; done
+for transposition in $transpositions ; do cd newpdfs/$transposition ; zip ../elaine-alt-lead-sheets-set-X-adventurous-instrumentals-$transposition.zip X-adventurous-instrumentals/*.pdf ; cd ../.. ; done
 
 for transposition in $transpositions ; do cd newpdfs/$transposition ; zip ../elaine-alt-lead-sheets-sets-I-II-III-IV-$transposition.zip I-inaugural-jazz/*.pdf II-jazz-symphony/*.pdf III-exploring-traditions/*.pdf IV-modern-jazz/*.pdf ; cd ../.. ; done
 for transposition in $transpositions ; do cd newpdfs/$transposition ; zip ../elaine-alt-lead-sheets-sets-V-VI-VII-IX-X-$transposition.zip V-west-coast-jazz/*.pdf  VI-lyrical-immersion/*.pdf  VII-jazz-combustion-uprising/*.pdf IX-period-jazz/*.pdf X-adventurous-instrumentals/*.pdf ; cd ../.. ; done
 
 for transposition in $transpositions ; do cd newpdfs/all-songs-$transposition ; zip ../elaine-alt-lead-sheets-all-songs-$transposition.zip *.pdf ; cd ../.. ; done
+
+
 
 

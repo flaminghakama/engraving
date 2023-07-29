@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-#  Before running this script, reate two git repos: SONG and SONG-pdf, 
+#  Before running this script, create two git repos: SONG and SONG-pdf, 
 #  which each have a README.md file.
 #
 #  Then clone these to the scores directory: 

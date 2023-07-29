@@ -23,7 +23,7 @@
 \defineBarLine "SS-double" #'("||" "SS" "||")
 \defineBarLine "SS[|:" #'("||" "SS[|:" "")
 \defineBarLine "S[|:" #'("||" "S[|:" "")
-\defineBarLine ":|]S" #'(":|]" "S" "")
+\defineBarLine ":|]S" #'(":|]" "S||" "")
 \defineBarLine ":|]S[|:" #'(":|]" "S[|:" "||")
 \defineBarLine ":|]SS[|:" #'(":|]" "SS[|:" "||")
 \defineBarLine "SS" #'("" "SS" "")

@@ -82,8 +82,8 @@ flamingChordNames = {
 
     % minor7 b13 as "- b13"
     <c e-flat g a-flat'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \teeny { \char ##x2013 } \magnify #0.1 { "  " }} \teeny " " \raise #1.2 { \tiny \flat } \teeny " " \raise #0.9 { \tiny "13" } }
-    <c e-flat g b-flat a-flat'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \teeny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.9 { \small "  " \flat "13" } }
-    <c e-flat g b-flat d' a-flat'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \teeny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.7 \normalsize "9 " \flat "13" }     
+    <c e-flat g b-flat a-flat'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \teeny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.9 { \small "  " \tiny \flat \tiny "13" } }
+    <c e-flat g b-flat d' a-flat'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \teeny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.7 \normalsize "9 " \tiny \flat \tiny "13" }     
     <c e-flat g b a-flat'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \teeny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.7 {  \magnify #0.64 { " " \triangle ##f } \small 7 \teeny " " \raise #0.5 { \tiny \flat }  \magnify #0.1 { "  " } \raise #0.3 { \tiny "13" } } }
     <c e-flat g b-flat d-flat' f-sharp'>1-\markup { 
         \raise #0.6 { \magnify #0.2 { "  " } \teeny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.7 \normalsize 7
@@ -154,7 +154,6 @@ flamingChordNames = {
 
     % Slash-only chords for Bb7/Ab in Eb
     <c e g b-flat cs' es' gs'>1-\markup \whiteout { \hspace #-2 "/F" }
-
 
     
     % Slash-only chords for F-/E# in C
