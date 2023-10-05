@@ -1,0 +1,105 @@
+Corpus X dates
+
+
+Greg 1-5, 7-13
+Gaea 1-13
+Caroline 1-5, 7-13
+
+1) Tuesday, 2/7/23
+Greg, Gaea, Tim
+
+2) Tuesday, 2/21/23
+Caroline, Greg, Gaea
+
+3) Tuesday, 3/7/23
+Caroline, Greg, Gaea
+
+4) Tuesday, 3/27/23
+Caroline, Greg, Gaea
+
+
+5) Tuesday, 4/11/23
+Greg, Gaea, Caroline
+
+6) Tuesday, 4/25/23
+Gaea, Ollie, Garry
+
+7) Tuesday, 5/9/23
+Greg, Gaea, Caroline
+
+8) Tuesday, 5/23/23
+Greg, Gaea, Caroline
+
+
+9) Tuesday, 7/11/23
+Greg, Gaea, Caroline
+
+10) Tuesday, 8/1/23
+Greg, Gaea, Caroline
+
+11) Tuesday, 8/29/23
+Greg, Gaea, Caroline
+
+
+
+
+
+Corpus Y I dates
+
+Monday, 1/30/23
+Carl, Josh
+
+Monday, 2/13/23
+Carl, Manny
+
+Monday, 2/27/23
+Carl, Sonya
+
+Monday, 3/13/23
+Carl, Sonya
+
+Monday, 3/27/23
+Carl, Sonya
+
+
+
+Corpus Y II dates
+
+1) Monday, 4/10/23
+Carl, Benjamin, Garry
+
+2) Monday, 4/24/23
+Carl, Benjamin, Garry
+
+3) Monday, 5/15/23
+Carl, Benjamin, Garry
+
+4) Monday, 5/29/23
+Benjamin, Garry, Chris
+
+
+5) Monday 7/24
+Carl Garry Benjamin
+
+6) Thursday 8/3
+Carl Garry Benjamin
+
+7) Monday, 8/21
+Carl Garry Benjamin
+
+8) Monday, 8/28
+Carl Garry Benjamin
+
+
+
+Corpus Z
+
+1) Tuesday 7/25
+Chris Wen-Hao Greg J.
+
+2) Tuesday 8/22
+Chris Wen-Hao Greg J.
+
+
+
+

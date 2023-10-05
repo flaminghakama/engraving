@@ -82,7 +82,8 @@ flamingChordNames = {
 
     % minor7 b13 as "- b13"
     <c e-flat g a-flat'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \teeny { \char ##x2013 } \magnify #0.1 { "  " }} \teeny " " \raise #1.2 { \tiny \flat } \teeny " " \raise #0.9 { \tiny "13" } }
-    <c e-flat g b-flat a-flat'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \teeny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.9 { \small "  " \tiny \flat \tiny "13" } }
+    <c e-flat g b-flat a-flat'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \teeny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.7 \normalsize 7 \raise #0.9 { \small "  " \tiny \flat \tiny "13" } }
+
     <c e-flat g b-flat d' a-flat'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \teeny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.7 \normalsize "9 " \tiny \flat \tiny "13" }     
     <c e-flat g b a-flat'>1-\markup { \raise #0.6 { \magnify #0.2 { "  " } \teeny { \char ##x2013 } \magnify #0.1 { "  " }} \raise #0.7 {  \magnify #0.64 { " " \triangle ##f } \small 7 \teeny " " \raise #0.5 { \tiny \flat }  \magnify #0.1 { "  " } \raise #0.3 { \tiny "13" } } }
     <c e-flat g b-flat d-flat' f-sharp'>1-\markup { 
@@ -341,7 +342,7 @@ flamingChordNames = {
     <c f g b-flat d' a'>1-\markup { \raise #0.4 { \small " sus" } \raise #1.0 \small 13 }
     <c f g d-flat'>1-\markup { \raise #0.4 { \small " sus" } \raise #1.2 { \teeny " " \tiny \flat \tiny "9" } }
     <c f g b-flat d-flat'>1-\markup { \raise #0.4 { \small " sus" } \raise #0.5 { \normalsize 7 } \raise #1.0 \small " " \flat "9" }
-    <c f g b-flat a-flat'>1-\markup { \raise #0.4 { \small " sus" } \raise #0.5 { \normalsize 7 } \raise #1.0 \small " " \tiny \flat \tiny "13" }
+    <c f g b-flat a-flat'>1-\markup { \raise #0.4 { \small " sus" } \raise #0.5 { \normalsize 7 } \raise #0.9 \line { \small " " \tiny \flat \tiny "13" } }
     <c f g-flat>1-\markup { \raise #0.4 { \small " sus" } \raise #1.2 { \teeny " " \tiny \flat \small 5 } }
     <c f g-flat b-flat d-flat'>1-\markup { \raise #0.4 { \small " sus" } \raise #0.5 { \normalsize 7 } \raise #1.0 \small \line { " " \flat "5" } \raise #1.0 \small " " \flat "9" }
     <c e g-flat b-flat d-flat' f' a-flat'>1-\markup { 
@@ -479,3 +480,11 @@ customChordMarkup = #(define-music-function (text) (markup?) #{
 %    \t \myCustomChordMarkup d1/g
 %    \t \myCustomChordMarkup c1/g
 %}
+
+chordRestsAsSlashes = {
+    \override Rest.stencil = #ly:percent-repeat-item-interface::beat-slash
+    \override Rest.thickness = #0.48
+    \override Rest.slope = #1.7
+    \override Rest.Y-offset = #1
+}
+

@@ -115,6 +115,15 @@ startSection = #(define-music-function
         \mark \markup { \box #sectionName } 
     #})
 
+startSectionNoBox = #(define-music-function
+    (sectionName)
+    (markup?)
+    #{
+        \showMeasureNumber
+        \bar "||"
+        \mark \markup { \bold #sectionName } 
+    #})
+
 startSectionMidbar = #(define-music-function
     (sectionName)
     (markup?)
@@ -169,6 +178,14 @@ startSectionWithLabel = #(define-music-function
     #{
         \showMeasureNumber
         \mark \markup { \box #sectionName \bold #sectionLabel } 
+    #})
+
+startSectionWithPrependedLabel = #(define-music-function
+    (sectionName sectionLabel)
+    (markup? markup?)
+    #{
+        \showMeasureNumber
+        \mark \markup { \bold #sectionLabel \box #sectionName } 
     #})
 
 startSectionWithRepeat = #(define-music-function
