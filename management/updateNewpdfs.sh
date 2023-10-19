@@ -144,6 +144,11 @@ cp lyrical-compositions/pdf/we-declare/we-declare-Voice-for-Eb.pdf newpdfs/all-s
 cp lyrical-compositions/pdf/we-declare/we-declare-Voice-for-Eb.pdf newpdfs/all-songs-all-transpositions
 
 
+for transposition in $transpositions ; do cp $score/pdf/octagon-warrior/octagon-warrior-Lead-Sheet-in-C-$transposition.pdf newpdfs/$transposition/$album ; done
+for transposition in $transpositions ; do cp $score/pdf/octagon-warrior/octagon-warrior-Lead-Sheet-in-C-$transposition.pdf newpdfs/all-songs-$transposition ; done
+for transposition in $transpositions ; do cp $score/pdf/octagon-warrior/octagon-warrior-Lead-Sheet-in-C-$transposition.pdf newpdfs/all-songs-all-transpositions ; done
+
+
 score=jazz-combustion
 album=IX-period-jazz
 songs="hot-swing kickin-the-can thick-as-a-nickel licorice-schtick swampy bouncy-jump steppin-jive"
