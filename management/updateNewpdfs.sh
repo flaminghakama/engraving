@@ -88,7 +88,7 @@ for transposition in $transpositions ; do cp $score/pdf/presque-tire-sale-in-god
 
 score=lyrical-compositions
 album=VI-lyrical-immersion
-songs="just-a-cup-of-coffee news-from-milan palo-alto-susan seven-oclock-tune frivolity mark-time elaine"
+songs="just-a-cup-of-coffee news-from-milan mark-time elaine"
 for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/$song/$song-Lead-Sheet-$transposition.pdf newpdfs/$transposition/$album ; done ; done
 for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/$song/$song-Lead-Sheet-$transposition.pdf newpdfs/all-songs-$transposition ; done ; done 
 for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/$song/$song-Lead-Sheet-$transposition.pdf newpdfs/all-songs-all-transpositions ; done ; done 
@@ -98,19 +98,27 @@ for transposition in $transpositions ; do cp $score/pdf/force-of-nature/force-of
 for transposition in $transpositions ; do cp $score/pdf/jasmine/jasmine-Lead-Sheet-in-C-$transposition.pdf newpdfs/$transposition/$album ; done
 for transposition in $transpositions ; do cp $score/pdf/a-classic-base/a-classic-base-Lead-Sheet-in-D-$transposition.pdf newpdfs/$transposition/$album ; done
 for transposition in $transpositions ; do cp $score/pdf/roberta-roberta/roberta-roberta-Lead-Sheet-in-Gb-$transposition.pdf newpdfs/$transposition/$album ; done
+for transposition in $transpositions ; do cp $score/pdf/palo-alto-susan/palo-alto-susan-Lead-Sheet-in-F-$transposition.pdf newpdfs/$transposition/$album ; done
+for transposition in $transpositions ; do cp $score/pdf/seven-oclock-tune/seven-oclock-tune-Lead-Sheet-in-E-$transposition.pdf newpdfs/$transposition/$album ; done
+for transposition in $transpositions ; do cp $score/pdf/frivolity/frivolity-Lead-Sheet-in-D-$transposition.pdf newpdfs/$transposition/$album ; done
 
 for transposition in $transpositions ; do cp $score/pdf/catch-me/catch-me-Lead-Sheet-in-F-minor-$transposition.pdf newpdfs/all-songs-$transposition ; done
 for transposition in $transpositions ; do cp $score/pdf/force-of-nature/force-of-nature-Lead-Sheet-in-E-$transposition.pdf newpdfs/all-songs-$transposition ; done
 for transposition in $transpositions ; do cp $score/pdf/jasmine/jasmine-Lead-Sheet-in-C-$transposition.pdf newpdfs/all-songs-$transposition ; done
 for transposition in $transpositions ; do cp $score/pdf/a-classic-base/a-classic-base-Lead-Sheet-in-D-$transposition.pdf newpdfs/all-songs-$transposition ; done
 for transposition in $transpositions ; do cp $score/pdf/roberta-roberta/roberta-roberta-Lead-Sheet-in-Gb-$transposition.pdf newpdfs/all-songs-$transposition ; done
+for transposition in $transpositions ; do cp $score/pdf/palo-alto-susan/palo-alto-susan-Lead-Sheet-in-F-$transposition.pdf newpdfs/all-songs-$transposition ; done
+for transposition in $transpositions ; do cp $score/pdf/seven-oclock-tune/seven-oclock-tune-Lead-Sheet-in-E-$transposition.pdf newpdfs/all-songs-$transposition ; done
+for transposition in $transpositions ; do cp $score/pdf/frivolity/frivolity-Lead-Sheet-in-D-$transposition.pdf newpdfs/all-songs-$transposition ; done
 
 for transposition in $transpositions ; do cp $score/pdf/catch-me/catch-me-Lead-Sheet-in-F-minor-$transposition.pdf newpdfs/all-songs-all-transpositions ; done
 for transposition in $transpositions ; do cp $score/pdf/force-of-nature/force-of-nature-Lead-Sheet-in-E-$transposition.pdf newpdfs/all-songs-all-transpositions ; done
 for transposition in $transpositions ; do cp $score/pdf/jasmine/jasmine-Lead-Sheet-in-C-$transposition.pdf newpdfs/all-songs-all-transpositions ; done
 for transposition in $transpositions ; do cp $score/pdf/a-classic-base/a-classic-base-Lead-Sheet-in-D-$transposition.pdf newpdfs/all-songs-all-transpositions ; done
 for transposition in $transpositions ; do cp $score/pdf/roberta-roberta/roberta-roberta-Lead-Sheet-in-Gb-$transposition.pdf newpdfs/all-songs-all-transpositions ; done
-
+for transposition in $transpositions ; do cp $score/pdf/palo-alto-susan/palo-alto-susan-Lead-Sheet-in-F-$transposition.pdf newpdfs/all-songs-all-transpositions ; done
+for transposition in $transpositions ; do cp $score/pdf/seven-oclock-tune/seven-oclock-tune-Lead-Sheet-in-E-$transposition.pdf newpdfs/all-songs-all-transpositions ; done
+for transposition in $transpositions ; do cp $score/pdf/frivolity/frivolity-Lead-Sheet-in-D-$transposition.pdf newpdfs/all-songs-all-transpositions ; done
 
 score=jazz-combustion
 album=VII-jazz-combustion-uprising
@@ -144,9 +152,9 @@ cp lyrical-compositions/pdf/we-declare/we-declare-Voice-for-Eb.pdf newpdfs/all-s
 cp lyrical-compositions/pdf/we-declare/we-declare-Voice-for-Eb.pdf newpdfs/all-songs-all-transpositions
 
 
-for transposition in $transpositions ; do cp $score/pdf/octagon-warrior/octagon-warrior-Lead-Sheet-in-C-$transposition.pdf newpdfs/$transposition/$album ; done
-for transposition in $transpositions ; do cp $score/pdf/octagon-warrior/octagon-warrior-Lead-Sheet-in-C-$transposition.pdf newpdfs/all-songs-$transposition ; done
-for transposition in $transpositions ; do cp $score/pdf/octagon-warrior/octagon-warrior-Lead-Sheet-in-C-$transposition.pdf newpdfs/all-songs-all-transpositions ; done
+for transposition in $transpositions ; do cp $score/pdf/octagon-warrior/octagon-warrior-Lead-Sheet-in-G-$transposition.pdf newpdfs/$transposition/$album ; done
+for transposition in $transpositions ; do cp $score/pdf/octagon-warrior/octagon-warrior-Lead-Sheet-in-G-$transposition.pdf newpdfs/all-songs-$transposition ; done
+for transposition in $transpositions ; do cp $score/pdf/octagon-warrior/octagon-warrior-Lead-Sheet-in-G-$transposition.pdf newpdfs/all-songs-all-transpositions ; done
 
 
 score=jazz-combustion
@@ -169,9 +177,9 @@ for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/
 for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/$song/$song-Lead-Sheet-$transposition.pdf newpdfs/all-songs-$transposition ; done ; done 
 for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/$song/$song-Lead-Sheet-$transposition.pdf newpdfs/all-songs-all-transpositions ; done ; done 
 
-cp adventurous-instrumentals/pdf/next-level-shit/next-level-shit-Bass-for-C.pdf newpdfs/for-C/X-adventurous-instrumentals
-cp adventurous-instrumentals/pdf/next-level-shit/next-level-shit-Bass-for-C.pdf newpdfs/all-songs-for-C
-cp adventurous-instrumentals/pdf/next-level-shit/next-level-shit-Bass-for-C.pdf newpdfs/all-songs-all-transpositions
+cp adventurous-instrumentals/pdf/next-level-shit/next-level-shit-Bass-Lead-Sheet-for-C.pdf newpdfs/for-C/X-adventurous-instrumentals
+cp adventurous-instrumentals/pdf/next-level-shit/next-level-shit-Bass-Lead-Sheet-for-C.pdf newpdfs/all-songs-for-C
+cp adventurous-instrumentals/pdf/next-level-shit/next-level-shit-Bass-Lead-Sheet-for-C.pdf newpdfs/all-songs-all-transpositions
 
 
 

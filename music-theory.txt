@@ -1,0 +1,59 @@
+In order of importance 
+
+1) 
+
+Overtone series and intervals 
+
+Term: Sound
+Term: Frequency
+Term: Fundamental
+Term: Overtone
+Term: Pitch
+
+Sound manifests as pressue waves of air, vibrating at various frequencies.  
+
+Freqency describes how quicky a vibration occurs, in terms of how many times it goes back and forth within a span of time, typically measured in cyles per second (Hz)
+
+Scientifically, we can analyze any sound according to the relative strength of different frequencies.  
+
+In general, any note played on a tonal instrument can be characterized according to a fundamental frequency which is the loudest, as well as additional higher frequencies that are softer.  These higher frequecies present in musical instrument sounds are called overtones.
+
+The difference in sound between different instruments such as a flute vs. a violin vs. a trumpet vs. a voice lies in the relative strengths of the overtones.
+
+Each note played by an tuned instrument corresponds to a frequency that maps to a pitch name.  Such as "A 440" 
+
+Playing any note will generate frequencies 
+
+Interval: Octave
+Interval: Fifth
+Interval: Fourth
+
+Symmetry says:  Pick a note.  Using this note as a fundamental, it will generate the note a 5th above it.  Likewise, there is another fundamental note below our note, which will generate our note as the 5th above itself.
+
+
+
+
+
+
+
+
+Symmetry
+
+
+
+Interval: Major 3rd 
+Interval: Minor 3rd
+
+Triads: Major 
+Triads: Minor  
+
+Chords: Dominant 7th
+Chords: Minor 7th
+
+
+2 ) 
+
+
+
+
+

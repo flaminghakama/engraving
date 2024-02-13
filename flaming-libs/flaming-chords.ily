@@ -145,7 +145,6 @@ flamingChordNames = {
     <c e g b-flat c-sharp' d-sharp'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.9 { \tiny \center-column { \lower #1.25 { " " \flat "9" } " #9" } } }
     <c e g b-flat d-flat' a-flat'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.9 { \tiny \center-column { \lower #1.25 { \line { " " \flat "9" } } \line { \flat "13" } } } }
     <c e g b-flat d-flat' f-sharp' a'>1-\markup { \raise #0.7 { \normalsize 13 } \raise #3.9 { \tiny \center-column { \lower #1.25 { " " \flat "9" } " #11" } } }
-    <c e g b-flat d-flat' a-flat'>1-\markup { \raise #0.7 { \normalsize 7 } \raise #3.9 { \tiny \column { \lower #1.25 { "    " \flat "9" } \line { "   " \flat "13" } } } }
 
 
     % Slash-only chords for Bb7/Ab in C
