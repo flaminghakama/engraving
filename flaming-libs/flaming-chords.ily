@@ -251,7 +251,18 @@ flamingChordNames = {
     <c e-flat g-flat b-flat d-flat'>1-\markup { \raise #0.5 { \magnify #0.85 \char ##x2205 } \raise #0.5 \concat { \tiny " " \raise #0.8 { \tiny \flat \tiny "9" } } }
     <c e-flat g-flat b-flat d'>1-\markup { \raise #0.5 { \magnify #0.85 \char ##x2205 } \raise #0.5 \concat { \tiny " " \raise #0.8 \tiny "9"  } }
     <c e-flat g-flat b-flat f'>1-\markup { \raise #0.5 { \magnify #0.85 \char ##x2205 } \raise #0.5 { \normalsize 11 } }
+    <c e-flat g-flat b-flat d' a'>1-\markup { 
+        \raise #0.5 { \magnify #0.85 \char ##x2205 }
+        \raise #3.9 { \tiny 
+            \center-column { 
+                \lower #1.25 { " 9" } 
+                \line { "13" } 
+            } 
+        } 
+    }
     <c e-flat g-flat b-flat a'>1-\markup { \raise #0.5 { \magnify #0.85 \char ##x2205 } \raise #0.5 { \normalsize 13 } }
+
+
 
     % Diminished
     %<c e-flat g-flat b-flatflat f'>1-\markup { \raise #1.5 { \magnify #2 \circle "" } \raise #0.5 { \normalsize 11 } }
