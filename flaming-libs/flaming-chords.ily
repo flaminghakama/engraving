@@ -489,4 +489,3 @@ chordRestsAsSlashes = {
     \override Rest.slope = #1.7
     \override Rest.Y-offset = #1
 }
-
