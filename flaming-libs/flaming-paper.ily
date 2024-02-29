@@ -1,4 +1,4 @@
-\version "2.22.0"
+\version "2.24.0"
 
 titleKern = "   "
 pageNumberKern = " "
@@ -13,7 +13,7 @@ pageNumberKern = " "
 %    Bookpart first page and last page predicates
 %
 %  Usage:
-%            \on-the-fly #not-part-first-page \fromproperty #'header:poet
+%            \unless \on-first-page-of-part \fromproperty #'header:poet
 %
 #(define (not-part-first-page layout props arg)
    (if (= (chain-assoc-get 'page:page-number props -1)
@@ -52,7 +52,7 @@ pageNumberKern = " "
     print-first-page-number = ##f
 
     oddHeaderMarkup = \markup {
-        \on-the-fly #print-page-number-check-first
+        \if \should-print-page-number
         \fill-line {
             \fromproperty #'header:instrumentName
             \line { 
@@ -175,7 +175,7 @@ noPageBreakBass = \tag #'Bass { \noPageBreak }
 low = #(define-music-function () () #{ \change Staff = "lower" #})
 hi = #(define-music-function () () #{ \change Staff = "upper" #})
 
-notuple = { \once \override TupletNumber #'stencil = ##f  \once \override TupletBracket #'stencil = ##f }
+notuple = { \once \override TupletNumber.stencil = ##f  \once \override TupletBracket.stencil = ##f }
 
 \layout {
     \context {
@@ -212,22 +212,26 @@ extendLV = #(define-music-function (further) (number?)
 
 #(define factor 2)
 
-#(define (enlarged-extent-laissez-vibrer::print grob)
-  (let* ((stil (laissez-vibrer::print grob))
-         (stil-ext (ly:stencil-extent stil X))
-         (stil-length (interval-length stil-ext))
-         (new-stil-length (* stil-length factor))
-         (scale-factor (/ new-stil-length stil-length))
-         (new-stil (ly:stencil-scale stil scale-factor 1))
-         (new-stil-ext (ly:stencil-extent new-stil X))
-         (x-corr (- (car stil-ext) (car new-stil-ext))))
-  (ly:stencil-translate-axis
-     new-stil
-     x-corr
-     X)))
+%
+%  Fails with error:
+%  Preprocessing graphical objects...../../flaming-libs/flaming-paper.ily:216:15: In procedure enlarged-extent-laissez-vibrer::print:
+%
+% #(define (enlarged-extent-laissez-vibrer::print grob)
+%   (let* ((stil (laissez-vibrer::print grob))
+%          (stil-ext (ly:stencil-extent stil X))
+%          (stil-length (interval-length stil-ext))
+%          (new-stil-length (* stil-length factor))
+%          (scale-factor (/ new-stil-length stil-length))
+%          (new-stil (ly:stencil-scale stil scale-factor 1))
+%          (new-stil-ext (ly:stencil-extent new-stil X))
+%          (x-corr (- (car stil-ext) (car new-stil-ext))))
+%   (ly:stencil-translate-axis
+%      new-stil
+%      x-corr
+%      X)))
 
-#(assoc-set! (assoc-ref all-grob-descriptions 'LaissezVibrerTie)
-'stencil enlarged-extent-laissez-vibrer::print)
+% #(assoc-set! (assoc-ref all-grob-descriptions 'LaissezVibrerTie)
+% 'stencil enlarged-extent-laissez-vibrer::print)
 
 #(define triangle->vertical-line-stencil
   (lambda (grob)

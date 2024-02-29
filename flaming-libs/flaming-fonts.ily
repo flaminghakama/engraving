@@ -4,7 +4,7 @@
 %%%% #(set-global-staff-size 17)
 %%%% \include "flaming-fonts.ly"
 
-\version "2.22.0"
+\version "2.24.0"
 
 #(define-public (add-notation-font fontnode name music-str brace-str factor)
   (begin 
@@ -49,23 +49,23 @@
     \context {
         \Staff
         \override Stem.details.beamed-lengths = #'(3.8 4 4.2)
-        \override Beam #'beam-thickness = #0.57
-        \override Beam #'length-fraction = #1.14
+        \override Beam.beam-thickness = #0.57
+        \override Beam.length-fraction = #1.14
         \override Beam.damping = #1.94
-        \override Tie #'thickness = #2.1
-        \override Slur #'thickness = #2.2
-        \override PhrasingSlur #'thickness = #2.6
+        \override Tie.thickness = #2.1
+        \override Slur.thickness = #2.2
+        \override PhrasingSlur.thickness = #2.6
         \override Hairpin.minimum-length = #3
     }
-    \override DynamicText #'font-family = #'sebastiano   % or haydn, gutenberg, Beethoven
+    \override DynamicText.font-family = #'sebastiano   % or haydn, gutenberg, Beethoven
     
-    %\override NoteHead #'font-family = #'scorlatti    % or lv-goldenage, scorlatti, Paganini, Gonville, Beethoven
-    % \override NoteHead #'font-family = #'beethoven
+    %\override NoteHead.font-family = #'scorlatti    % or lv-goldenage, scorlatti, Paganini, Gonville, Beethoven
+    % \override NoteHead.font-family = #'beethoven
     
-    % \override Script #'font-family = #'lv-goldenage      % or Beethoven i.e., the articulations
-    %\override Script #'font-family = #'beethoven
+    % \override Script.font-family = #'lv-goldenage      % or Beethoven i.e., the articulations
+    %\override Script.font-family = #'beethoven
     
-    %\override TrillSpanner #'font-family = #'scorlatti   % or Paganini
-    \override TrillSpanner #'font-family = #'paganini   % or Paganini
+    %\override TrillSpanner.font-family = #'scorlatti   % or Paganini
+    \override TrillSpanner.font-family = #'paganini   % or Paganini
 }  
 

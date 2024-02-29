@@ -1,20 +1,20 @@
-\version "2.22.0"
+\version "2.24.0"
 
 breath = {
-    \once \override BreathingSign #'text = \markup {
+    \once \override BreathingSign.text = \markup {
         \raise #2 \line { " " \musicglyph "scripts.rcomma" \small " " }
     }
     \breathe
 }
 
 parenBreath = {
-    \once \override BreathingSign #'text = \markup {
+    \once \override BreathingSign.text = \markup {
         \raise #2 \line { " " \musicglyph "scripts.rcomma" \small " " }
     } 
 }
 
 railroadTracks = {
-    \once \override BreathingSign #'text = \markup {
+    \once \override BreathingSign.text = \markup {
         \raise #2 \line { "  " \musicglyph "scripts.caesura.curved" " " }
     }
     \breathe

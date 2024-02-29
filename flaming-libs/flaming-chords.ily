@@ -1,4 +1,4 @@
-\version "2.22.0" 
+\version "2.24.0" 
 \include "english.ly"
 
 flamingChordNames = {
@@ -252,6 +252,8 @@ flamingChordNames = {
     <c e-flat g-flat b-flat d'>1-\markup { \raise #0.5 { \magnify #0.85 \char ##x2205 } \raise #0.5 \concat { \tiny " " \raise #0.8 \tiny "9"  } }
     <c e-flat g-flat b-flat f'>1-\markup { \raise #0.5 { \magnify #0.85 \char ##x2205 } \raise #0.5 { \normalsize 11 } }
     <c e-flat g-flat b-flat a'>1-\markup { \raise #0.5 { \magnify #0.85 \char ##x2205 } \raise #0.5 { \normalsize 13 } }
+    <c e-flat g-flat b-flat d' a'>1-\markup { \raise #0.5 { \magnify #0.85 \char ##x2205 } \raise #3.0 { \tiny \center-column { \lower #1.25 { "  9" } " 13" } } }
+        
 
     % Diminished
     %<c e-flat g-flat b-flatflat f'>1-\markup { \raise #1.5 { \magnify #2 \circle "" } \raise #0.5 { \normalsize 11 } }
@@ -377,7 +379,7 @@ useFlamingChords = {
 }
 
 chordRestsAsSlashes = {
-    \override Rest.stencil = #ly:percent-repeat-item-interface::beat-slash
+    \override Rest.stencil = #ly:percent-repeat-interface::beat-slash
     \override Rest.thickness = #0.48
     \override Rest.slope = #1.7
     \override Rest.Y-offset = #1
@@ -385,26 +387,26 @@ chordRestsAsSlashes = {
 
 % Macro to print single slash
 rs = {
-  \once \override Rest #'stencil = #ly:percent-repeat-item-interface::beat-slash
-  \once \override Rest #'thickness = #0.48
-  \once \override Rest #'slope = #1.7
+  \once \override Rest.stencil = #ly:percent-repeat-interface::beat-slash
+  \once \override Rest.thickness = #0.48
+  \once \override Rest.slope = #1.7
   r4
 }
 rss = {
-  \once \override Rest #'stencil = #ly:percent-repeat-item-interface::beat-slash
-  \once \override Rest #'thickness = #0.48
-  \once \override Rest #'slope = #1.7
+  \once \override Rest.stencil = #ly:percent-repeat-interface::beat-slash
+  \once \override Rest.thickness = #0.48
+  \once \override Rest.slope = #1.7
   r4.
 }
 
 % Function to print a specified number of slashes
 comp = #(define-music-function (count) ( integer?)
     #{
-        \override Rest #'stencil = #ly:percent-repeat-item-interface::beat-slash
-        \override Rest #'thickness = #0.48
-        \override Rest #'slope = #1.7
+        \override Rest.stencil = #ly:percent-repeat-interface::beat-slash
+        \override Rest.thickness = #0.48
+        \override Rest.slope = #1.7
         \repeat unfold $count { r4 }
-        \revert Rest #'stencil
+        \revert Rest.stencil
     #}
 )
 
@@ -420,22 +422,22 @@ comp = #(define-music-function (count) ( integer?)
 % Function to print a specified number of slashes
 compp = #(define-music-function (count) ( integer?)
     #{
-        \override Rest #'stencil = #ly:percent-repeat-item-interface::beat-slash
-        \override Rest #'thickness = #0.48
-        \override Rest #'slope = #1.7
+        \override Rest.stencil = #ly:percent-repeat-interface::beat-slash
+        \override Rest.thickness = #0.48
+        \override Rest.slope = #1.7
         \repeat unfold $count { \once \override Dots.transparent = ##t r4. }
-        \revert Rest #'stencil
+        \revert Rest.stencil
     #}
 )
 
 
 startSolo = \relative c' {
-    \override Rest #'stencil = #ly:percent-repeat-item-interface::beat-slash
-    \override Rest #'thickness = #0.48
-    \override Rest #'slope = #1.7
+    \override Rest.stencil = #ly:percent-repeat-interface::beat-slash
+    \override Rest.thickness = #0.48
+    \override Rest.slope = #1.7
     r4^"Solo"
     \repeat unfold 3 { r4 }
-    \revert Rest #'stencil
+    \revert Rest.stencil
 }
 
 makePercent =
@@ -482,7 +484,7 @@ customChordMarkup = #(define-music-function (text) (markup?) #{
 %}
 
 chordRestsAsSlashes = {
-    \override Rest.stencil = #ly:percent-repeat-item-interface::beat-slash
+    \override Rest.stencil = #ly:percent-repeat-interface::beat-slash
     \override Rest.thickness = #0.48
     \override Rest.slope = #1.7
     \override Rest.Y-offset = #1
