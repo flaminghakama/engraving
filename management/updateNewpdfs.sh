@@ -35,6 +35,9 @@ cp inaugural-jazz/pdf/in-a-ditch/in-a-ditch-Melody-Counterpoint-for-C.pdf newpdf
 cp inaugural-jazz/pdf/in-a-ditch/in-a-ditch-Melody-Counterpoint-for-C.pdf newpdfs/all-songs-for-C
 cp inaugural-jazz/pdf/in-a-ditch/in-a-ditch-Melody-Counterpoint-for-C.pdf newpdfs/all-songs-all-transpositions
 
+cp inaugural-jazz/pdf/enclosure/enclosure-Bass-for-C.pdf newpdfs/for-C/I-inaugural-jazz
+cp inaugural-jazz/pdf/enclosure/enclosure-Bass-for-C.pdf newpdfs/all-songs-for-C
+cp inaugural-jazz/pdf/enclosure/enclosure-Bass-for-C.pdf newpdfs/all-songs-all-transpositions
 
 score=jazz-symphony
 album=II-jazz-symphony
@@ -64,6 +67,10 @@ songs="popcorn annes-eyes nancy-joe spring-to-mission-hill the-end-of-bebop tran
 for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/$song/$song-Lead-Sheet-$transposition.pdf newpdfs/$transposition/$album ; done ; done 
 for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/$song/$song-Lead-Sheet-$transposition.pdf newpdfs/all-songs-$transposition ; done ; done 
 for song in $songs ; do for transposition in $transpositions ; do cp $score/pdf/$song/$song-Lead-Sheet-$transposition.pdf newpdfs/all-songs-all-transpositions ; done ; done 
+
+for transposition in $transpositions ; do cp $score/pdf/popcorn/popcorn-Lead-Sheet-in-Db-$transposition.pdf newpdfs/$transposition/$album ; done
+for transposition in $transpositions ; do cp $score/pdf/popcorn/popcorn-Lead-Sheet-in-Db-$transposition.pdf newpdfs/all-songs-$transposition ; done
+for transposition in $transpositions ; do cp $score/pdf/popcorn/popcorn-Lead-Sheet-in-Db-$transposition.pdf newpdfs/all-songs-all-transpositions ; done
 
 
 score=journeythem-instrumentals

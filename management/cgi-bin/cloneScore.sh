@@ -2,8 +2,8 @@
 
 REPO=$1
 cd ../scores
-#git clone git@github.com:flaminghakama/$REPO-pdf 2>&1
-git clone https://github.com/flaminghakama/$REPO-pdf.git 2>&1 
+git clone git@github.com:flaminghakama/$REPO-pdf 2>&1
+# git clone https://github.com/flaminghakama/$REPO-pdf.git 2>&1 
 mv $REPO-pdf $REPO
 cd $REPO 2>&1
 git checkout main

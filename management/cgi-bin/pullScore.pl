@@ -18,7 +18,7 @@ if (!$REPO) {
 } else { 
 
     print '<h2>pullScorePdf.sh ' . $REPO . '</h2>';
-    my $PDF = `./pullScorePdf.sh $REPO`;
+    my $PDF = `./pullScore.sh $REPO`;
     $PDF =~ s/\n/<br>\n/g;
     print "<p><tt>$PDF</tt></p>";
 
