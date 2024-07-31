@@ -30,7 +30,7 @@ sharpTrillStart = \once \override TrillSpanner.bound-details.left.text = \markup
     \musicglyph "scripts.trill" \raise #0.65 \teeny  { \sharp } 
 }
 
-fermata = <>^\markup { \translate #(cons 1 -3 ) \musicglyph "scripts.ufermata" }
+fermata = <>^\markup { \translate #(cons 0.785 -3 ) \musicglyph "scripts.ufermata" }
 fermataBelow = <>_\markup { \translate #(cons 1 -1 ) \rotate #180 \musicglyph "scripts.ufermata" }
 toCoda = <>^\markup \translate #'( 1 . 3 ) \huge \bold \musicglyph "scripts.coda" 
 

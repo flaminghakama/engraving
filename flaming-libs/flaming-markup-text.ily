@@ -13,6 +13,7 @@ rit = <>^\markup \raise #markingPadding { \italic "rit" }
 aTempo = <>^\markup \raise #markingPadding { \italic "a tempo" }
 mezzoVoce = <>^\markup \raise #markingPadding { \italic "mezzo voce" }
 sottoVoce = <>^\markup \raise #markingPadding { \italic "sotto voce" }
+espr = <>^\markup \raise #markingPadding { \italic "espr." }
 
 secondTimeOnly = <>^\markup \raise #markingPadding { \large \bold "2nd X Only" }
 bothTimes = <>^\markup \raise #markingPadding { \large \bold "Both X" }

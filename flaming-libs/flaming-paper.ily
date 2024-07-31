@@ -88,8 +88,8 @@ pageNumberKern = " "
 }
 
 \layout {
-    indent = 1\cm
-    short-indent = .25\cm
+    indent = 0.65\cm
+    short-indent = .15\cm
 }
 
 % For metric modulcations

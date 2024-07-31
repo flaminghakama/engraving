@@ -86,7 +86,6 @@
                ))
       ))
 
-
 ffDolce = #(make-dynamic-extra "ff" "dolce")
 
 pEspr = #(make-dynamic-extra "p" "espr.")
@@ -118,7 +117,15 @@ fSub = #(make-dynamic-extra "f" "sub.")
 ffSub = #(make-dynamic-extra "ff" "sub.")
 fffSub= #(make-dynamic-extra "fff" "sub.")
 
-dim= #(make-extra-dynamic "dim." "")
+pppSempre = #(make-dynamic-extra "ppp" "sempre.")
+ppSempre = #(make-dynamic-extra "pp" "sempre.")
+pSempre = #(make-dynamic-extra "p" "sempre.")
+mpSempre = #(make-dynamic-extra "mp" "sempre.")
+mfSempre = #(make-dynamic-extra "mf" "sempre.")
+fSempre = #(make-dynamic-extra "f" "sempre.")
+ffSempre = #(make-dynamic-extra "ff" "sempre.")
+fffSempre= #(make-dynamic-extra "fff" "sempre.")
+
 pMpMf = #(make-dynamic-repeat "p" " -" "mp" " -" "mf")
 mpMfF = #(make-dynamic-repeat "mp" " -" "mf" " -" "f")
 pMp = #(make-two-dynamics "p" " -" "mp")
@@ -138,6 +145,7 @@ fEspr = #(make-dynamic-extra “f” “espr.”)
 ffEspr = #(make-dynamic-extra “ff” “espr.”)
 fffEspr = #(make-dynamic-extra “fff” “espr.”)
 %}
+
 
 mfp = #(make-dynamic-script "mfp")
 pmf = #(make-dynamic-script "pmf")
