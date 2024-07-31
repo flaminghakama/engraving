@@ -1,0 +1,16 @@
+Transcribing
+
+What to transcribe
+* sequence of melody notes
+* rhythm of melody
+* time signature(s)
+* key signature(s)
+* song form (AABA, Verse-Chorus-Bridge, etc.)
+* chord changes
+* bass lines
+* countermelodies
+* harmonization of melody
+* arrangement (head, solos, fours, head)
+
+choose an order
+choose an amount

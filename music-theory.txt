@@ -5,24 +5,55 @@ In order of importance
 Overtone series and intervals 
 
 Term: Sound
-Term: Frequency
-Term: Fundamental
-Term: Overtone
-Term: Pitch
 
 Sound manifests as pressue waves of air, vibrating at various frequencies.  
+
+In our ears, changing waves of air pressure trigger a neurological response.  
+
+
+Term: Frequency
 
 Freqency describes how quicky a vibration occurs, in terms of how many times it goes back and forth within a span of time, typically measured in cyles per second (Hz)
 
 Scientifically, we can analyze any sound according to the relative strength of different frequencies.  
 
-In general, any note played on a tonal instrument can be characterized according to a fundamental frequency which is the loudest, as well as additional higher frequencies that are softer.  These higher frequecies present in musical instrument sounds are called overtones.
 
-The difference in sound between different instruments such as a flute vs. a violin vs. a trumpet vs. a voice lies in the relative strengths of the overtones.
+Term: Tone
 
-Each note played by an tuned instrument corresponds to a frequency that maps to a pitch name.  Such as "A 440" 
+Sound sources that sound "noisy" are genearlly composed of a range of frequencies, without any that stand out.
 
-Playing any note will generate frequencies 
+Whereas, what makes a musical sound is the ability to focus the range of freqencies to a smaller number, and produce what we call tone.   
+
+
+Term: Fundamental
+
+In general, any note played on a tonal instrument can be characterized according to a fundamental frequency which is the loudest, as well as additional higher frequencies that are softer.  
+
+
+Term: Pitch
+
+We assign a name to a tone based on its fundamental frequency.  
+For example, for a tone with fundamental frequency of 440Hz, we define that as the pitch "A".
+
+In addition, we treat integer multiples of this frequency as the same pitch name.  For example, a tone with fundamental frequency 880Hz is also the pitch "A".  
+
+So, in general, the term pitch is less distinct than a frequency.  
+
+
+
+Term: Overtone
+
+The difference in sound (for sustained sounds) between different instruments such as a flute, violin, trumpet or voice, lies in the relative strengths of the overtones.
+
+In addition, the our general concept of which notes sound good when played together comes from the relationship between overtones.
+
+This means that when two tones are played together, when the second tone has a fundamental frequency that matches an overtone of a first tone, we find that pleasing.
+
+Likewise, when a second tone has an overtone that matches the fundamental frequency of the first tone, we find that pleasing.
+
+In addition, we perceive a relationship between these two sounds, and an asymmetry in terms of 
+
+
 
 Interval: Octave
 Interval: Fifth
@@ -53,6 +84,38 @@ Chords: Minor 7th
 
 2 ) 
 
+
+
+Overtone series : on a single note & set of notes you can play on an instrument with the same fingering
+Frequencies
+Playing another note whose fundamental 
+
+What is tonality?  It is an expression of asymmetry that prioritizes a single tone as the reference point of resolution.
+
+How is tonality established
+
+
+
+Symmetry vs Asymmetry  
+"Divided equally" "each interval is the same"
+
+Keyboard layout vs clock layout 
+
+
+Derive major scale from the overtone series
+what is the complement
+
+How to go through all keys 
+
+
+Chromatically upwards & downwards
+By 4th/5th upwards & downwards
+
+
+
+How to find the 4th?
+1) go up the major scale 3 steps
+2) go up to the 5th then down 2 chromatic steps
 
 
 
