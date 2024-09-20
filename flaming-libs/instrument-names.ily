@@ -55,6 +55,8 @@ tenorSaxophoneNameOnly = \markup \concat { "Tenor Saxophone in B" \hspace #0.1 \
 tenorSaxophoneINameOnly = \markup \concat { "Tenor Saxophone I in B" \hspace #0.1 \raise #0.35 \flat }
 tenorSaxophoneIINameOnly = \markup \concat { "Tenor Saxophone II in B" \hspace #0.1 \raise #0.35 \flat }
 baritoneSaxophoneNameOnly = \markup \concat { "Baritone Saxophone in E" \hspace #0.1 \raise #0.35 \flat }
+baritoneSaxophoneINameOnly = \markup \concat { "Baritone Saxophone I in E" \hspace #0.1 \raise #0.35 \flat }
+baritoneSaxophoneIINameOnly = \markup \concat { "Baritone Saxophone II in E" \hspace #0.1 \raise #0.35 \flat }
 
 trumpetNameOnly = \markup \concat { "Trumpet in B" \teeny " " \hspace #0.1 \raise #0.35 \flat }
 trumpetINameOnly = \markup \concat { "Trumpet I in B" \teeny " " \hspace #0.1 \raise #0.35 \flat }
@@ -130,6 +132,7 @@ tenorSaxophoneName = \markup \formatInstrumentName \tenorSaxophoneNameOnly
 tenorSaxophoneIName = \markup \formatInstrumentName \tenorSaxophoneINameOnly
 tenorSaxophoneIIName = \markup \formatInstrumentName \tenorSaxophoneIINameOnly
 baritoneSaxophoneName = \markup \formatInstrumentName \baritoneSaxophoneNameOnly
+baritoneSaxophoneIIName = \markup \formatInstrumentName \baritoneSaxophoneIINameOnly
 
 trumpetName = \markup \formatInstrumentName \trumpetNameOnly
 trumpetIName = \markup \formatInstrumentName \trumpetINameOnly

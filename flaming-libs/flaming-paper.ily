@@ -24,7 +24,7 @@ pageNumberKern = " "
 \paper {
 
     top-margin = #2
-    right-margin = #14
+    right-margin = #8
     bottom-margin = #7
 
     top-system-spacing.minimum-distance = #16
@@ -88,8 +88,8 @@ pageNumberKern = " "
 }
 
 \layout {
-    indent = 0.65\cm
-    short-indent = .15\cm
+    indent = 0.45\cm
+    short-indent = 0.0\cm
 }
 
 % For metric modulcations
