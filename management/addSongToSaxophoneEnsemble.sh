@@ -1,11 +1,12 @@
 #!/usr/local/bin/bash
 #
-#    Usage: addSongToSaxophoneEnsemble.sh my-song "My Song"
+#    Usage: addSongToSaxophoneEnsemble.sh my-song "My Song" mySong
 #
 
-USAGE="addSongToSaxophoneEnsemble.sh my-song \"My Song\""
+USAGE="addSongToSaxophoneEnsemble.sh my-song \"My Song\" mySong"
 SONG=$1
 TITLE=$2
+VARIABLE=$3
 
 if [ "$SONG" = "" ] ; then 
     echo $USAGE
@@ -17,9 +18,14 @@ if [ "$TITLE" = "" ] ; then
     exit 2
 fi
 
+if [ "$VARIABLE" = "" ] ; then 
+    echo $USAGE
+    exit 3
+fi
+
 PART=("Part-1-Alto-Saxohpone-I-in-Eb" "Part-1-Soprano-Saxohpone-in-Bb" "Part-2-Alto-Saxohpone-II-in-Eb" "Part-3-Tenor-Saxohpone-in-Bb" "Part-4-Baritone-Saxohpone-in-Eb")
 
-SCORE=("Score-AABB" "Score-AABB" "Score-STTT")
+SCORE=("Score-AATB" "Score-AABB" "Score-STTT")
 
 POET=("Saxophone Quartet (AATB)" "Saxophone Quartet (AABB)" "Saxophone Quartet (STTT)")
 
@@ -51,8 +57,7 @@ BUILD=buildParts.sh
 echo "Adding song $SONG to build $BUILD"
 echo "" >> $BUILD
 echo "if [ \"\$SONG\" = \"\" ] || [ \"\$SONG\" = \"$SONG\" ] ; then" >> $BUILD 
-echo "    buildPart \$THIS_SONG Lead-Sheet-for-C" >> $BUILD
-
+echo "    THIS_SONG=\"$SONG\"" >> $BUILD
 
 for INDEX in 0 1 2 3 4 ; do 
     THIS_PART=${PART[$INDEX]}
@@ -81,6 +86,7 @@ for INDEX in 0 1 2 ; do
 
     BOOK_SCORE_FILE="ly/books/$SONG/${SCORE[$INDEX]}.ily"
     cp $BOOK_SCORE_TEMPLATE $BOOK_SCORE_FILE
+    perl -p -i -e "s/SCORE/${SCORE[$INDEX]}/g" $BOOK_SCORE_FILE
     perl -p -i -e "s/TITLE/$TITLE/g" $BOOK_SCORE_FILE
     perl -p -i -e "s/POET/${POET[$INDEX]}/g" $BOOK_SCORE_FILE
 
@@ -90,12 +96,19 @@ done
 
 echo "fi" >> $BUILD
 
+MUSIC_FILE="ly/muisic/$SONG.ily"
+cp ly/music/MUSIC.ily $MUSIC_FILE
+perl -p -i -e "s/VARIABLE/$VARIABLE/g" $MUSIC_FILE
 
-cp ly/music/music.ily ly/music/$SONG.ily
-cp ly/structures/header.ily ly/structures/$SONG-header.ily
-cp ly/structures/forms.ily ly/structures/$SONG-forms.ily
-cp ly/structures/chords.ily ly/structures/$SONG-chords.ily
-cp ly/structures/lyrics.ily ly/structures/$SONG-lyrics.ily
+HEADER_FILE="ly/structures/$SONG/header.ily"
+cp ly/structures/SONG/header.ily $HEADER_FILE
+perl -p -i -e "s/TITLE/$TITLE/g" $HEADER_FILE
+perl -p -i -e "s/SONG/$SONG/g" $HEADER_FILE
+perl -p -i -e "s/VARIABLE/$VARIABLE/g" $HEADER_FILE
+
+cp ly/structures/SONG/forms.ily ly/structures/$SONG/forms.ily
+cp ly/structures/SONG/chords.ily ly/structures/$SONG/chords.ily
+cp ly/structures/SONG/lyrics.ily ly/structures/$SONG/lyrics.ily
 
 
 
